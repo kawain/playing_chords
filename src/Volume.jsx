@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { setMasterVolume, getMasterVolume } from './etc/sound' // sound.js から関数をインポート
 
 function Volume () {

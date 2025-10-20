@@ -91,6 +91,30 @@ export const Range = [
 ]
 
 // ------------------------------------
+// 音源情報を一元管理するオブジェクト
+// ------------------------------------
+/**
+ * 楽器名、音源ファイルのパス、ピッチシフトの基準音をまとめたオブジェクト。
+ * ここを編集するだけで、楽器の追加・変更ができます。
+ *
+ * @property {string} path - /public/sounds/ からのファイルパス
+ * @property {string | null} pitch - ピッチシフトの基準となる音名 (例: "C4")。
+ *                                  打楽器などピッチシフトしない場合は null を指定します。
+ */
+export const SoundSources = {
+  // chordProgressionRules.js で使われている楽器名をキーにします
+  piano: { path: 'piano_C4.wav', pitch: 'C4' },
+  bass: { path: 'fingered-bass-guitar_C2.wav', pitch: 'C2' },
+
+  // --- ドラム類（ピッチシフトなし） ---
+  finger: { path: 'finger.wav', pitch: null },
+  hihat: { path: 'switch.wav', pitch: null },
+  cymbal: { path: 'cymbal.wav', pitch: null },
+  'bass-drum': { path: 'kick.wav', pitch: null },
+  'snare-drum': { path: 'snare.wav', pitch: null }
+}
+
+// ------------------------------------
 // 周波数計算
 // ------------------------------------
 const A4_FREQUENCY = 440
@@ -126,15 +150,35 @@ export function calculateFrequency (noteName) {
   return A4_FREQUENCY * Math.pow(SEMITONE_RATIO, semitonesFromA4)
 }
 
-export const PIANO_BASE_FREQUENCY = calculateFrequency('A4')
-export const GUITAR_BASE_FREQUENCY = calculateFrequency('C4')
-
 // ------------------------------------
 // AudioContextとバッファ管理
 // ------------------------------------
+
 let audioContext = null
-let masterGainNode = null // マスターゲインノードを追加
+let masterGainNode = null
 const audioBuffers = {}
+
+/**
+ * AudioContextを取得または初期化します。
+ * @returns {AudioContext | null}
+ */
+export function getAudioContext () {
+  if (!audioContext) {
+    // ユーザーインタラクションがないと初期化できない場合がある
+    try {
+      audioContext = new (window.AudioContext || window.webkitAudioContext)()
+      console.log('AudioContext initialized.')
+      masterGainNode = audioContext.createGain()
+      masterGainNode.gain.value = 0.5
+      masterGainNode.connect(audioContext.destination)
+      console.log('Master Gain Node initialized.')
+    } catch (e) {
+      console.error('Could not initialize AudioContext:', e)
+      return null
+    }
+  }
+  return audioContext
+}
 
 /**
  * AudioContextを初期化します。ユーザーインタラクション後にのみ呼び出されるべきです。
@@ -143,10 +187,8 @@ function initAudioContext () {
   if (!audioContext) {
     audioContext = new (window.AudioContext || window.webkitAudioContext)()
     console.log('AudioContext initialized.')
-
-    // マスターゲインノードを初期化し、destinationに接続
     masterGainNode = audioContext.createGain()
-    masterGainNode.gain.value = 0.5 // 初期音量を0.5 (50%)に設定
+    masterGainNode.gain.value = 0.5
     masterGainNode.connect(audioContext.destination)
     console.log(
       'Master Gain Node initialized with volume:',
@@ -161,7 +203,7 @@ function initAudioContext () {
  */
 async function loadSound (filename) {
   const url = `/sounds/${filename}`
-  if (audioBuffers[url]) return audioBuffers[url] // 既にロード済みなら返す
+  if (audioBuffers[url]) return audioBuffers[url]
 
   if (!audioContext) {
     console.error(
@@ -185,14 +227,15 @@ async function loadSound (filename) {
 }
 
 /**
- * すべての基礎音を読み込む
- * この関数はユーザーの最初のインタラクション後に呼び出され、主要なサウンドを事前にロードします。
+ * SoundSourcesオブジェクトに定義されたすべての音源を読み込む
  */
 export async function loadAllSounds () {
   initAudioContext()
-  const SOUND_FILES = ['PianoA4.wav', 'Guitar-C4.wav']
   try {
-    await Promise.all(SOUND_FILES.map(filename => loadSound(filename)))
+    const loadPromises = Object.values(SoundSources).map(source =>
+      loadSound(source.path)
+    )
+    await Promise.all(loadPromises)
     console.log('All base sounds loaded.')
   } catch (err) {
     console.error('Error loading base sounds:', err)
@@ -200,45 +243,80 @@ export async function loadAllSounds () {
 }
 
 /**
+ * 指定した時間に音を再生するようにスケジュールします。
+ * @param {string} instrument - "piano", "bass" など SoundSources のキー名
+ * @param {string | null} note - "C4" など。打楽器の場合は null
+ * @param {number} when - AudioContextの絶対時間で、いつ再生を開始するか
+ * @returns {AudioBufferSourceNode | null} 生成されたオーディオソースノード
+ */
+export function playScheduledNote (instrument, note, when) {
+  const audioCtx = getAudioContext()
+  if (!audioCtx || !masterGainNode) {
+    console.warn('AudioContext not ready, cannot schedule note.')
+    return null
+  }
+
+  const sourceInfo = SoundSources[instrument]
+  if (!sourceInfo) {
+    console.error('Unknown instrument:', instrument)
+    return null
+  }
+
+  const url = `/sounds/${sourceInfo.path}`
+  const buffer = audioBuffers[url]
+  if (!buffer) {
+    console.warn(`Buffer for ${instrument} not loaded yet. Cannot play.`)
+    return null
+  }
+
+  const sourceNode = audioCtx.createBufferSource()
+  sourceNode.buffer = buffer
+
+  if (sourceInfo.pitch && note) {
+    const baseFreq = calculateFrequency(sourceInfo.pitch)
+    const targetFreq = calculateFrequency(note)
+    if (baseFreq > 0 && targetFreq > 0) {
+      sourceNode.playbackRate.value = targetFreq / baseFreq
+    }
+  }
+
+  sourceNode.connect(masterGainNode)
+  sourceNode.start(when)
+  return sourceNode
+}
+
+/**
  * 音を再生
- * @param {string} instrument - "Piano" または "Guitar"
- * @param {string} note - "C4" など
+ * @param {string} instrument - "piano", "bass" など SoundSources のキー名
+ * @param {string | null} note - "C4" など。打楽器の場合は null
  */
 export async function playNote (instrument, note) {
   initAudioContext()
 
   if (!audioContext || !masterGainNode) {
-    // masterGainNode の確認も追加
     console.warn(
       'AudioContext or Master Gain Node not initialized, cannot play note.'
     )
     return
   }
 
-  let filename, baseFreq
-  switch (instrument) {
-    case 'Piano':
-      filename = 'PianoA4.wav'
-      baseFreq = PIANO_BASE_FREQUENCY
-      break
-    case 'Guitar':
-      filename = 'Guitar-C4.wav'
-      baseFreq = GUITAR_BASE_FREQUENCY
-      break
-    default:
-      console.error('Unknown instrument:', instrument)
-      return
+  // SoundSourcesオブジェクトから楽器の情報を取得
+  const sourceInfo = SoundSources[instrument]
+  if (!sourceInfo) {
+    console.error('Unknown instrument:', instrument)
+    return
   }
 
-  const url = `/sounds/${filename}`
+  const { path, pitch: basePitch } = sourceInfo
+  const url = `/sounds/${path}`
   let buffer = audioBuffers[url]
 
   if (!buffer) {
     console.log(
-      `Sound buffer for ${filename} not found, attempting to load dynamically...`
+      `Sound buffer for ${path} not found, attempting to load dynamically...`
     )
     try {
-      buffer = await loadSound(filename)
+      buffer = await loadSound(path)
     } catch (error) {
       console.error(
         `Failed to dynamically load sound for ${instrument} (${note}):`,
@@ -255,11 +333,21 @@ export async function playNote (instrument, note) {
     return
   }
 
-  const playbackRate = calculateFrequency(note) / baseFreq
   const source = audioContext.createBufferSource()
   source.buffer = buffer
-  source.playbackRate.value = playbackRate
-  source.connect(masterGainNode) // ここを masterGainNode に接続
+
+  // ピッチ（音の高さ）を調整
+  if (basePitch && note) {
+    // 基準音があり、再生する音の指定もある場合（ピアノ、ベースなど）
+    const baseFreq = calculateFrequency(basePitch)
+    const targetFreq = calculateFrequency(note)
+    source.playbackRate.value = targetFreq / baseFreq
+  } else {
+    // 打楽器など、音の高さを変えない場合
+    source.playbackRate.value = 1.0
+  }
+
+  source.connect(masterGainNode)
   source.start(0)
 }
 
@@ -284,5 +372,5 @@ export function getMasterVolume () {
   if (masterGainNode) {
     return masterGainNode.gain.value
   }
-  return 0.5 // AudioContextが未初期化の場合のデフォルト
+  return 0.5
 }

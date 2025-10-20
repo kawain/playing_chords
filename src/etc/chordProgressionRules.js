@@ -98,18 +98,190 @@ const jsonText = `{
   ]
 }`
 
-let chordProgression = null
+// let chordProgression = null
 
-try {
-  chordProgression = parseChordProgression(jsonText)
-  //   console.log(chordProgression)
-} catch (error) {
-  console.error('Error parsing chord progression:', error.message)
-}
+// try {
+//   chordProgression = parseChordProgression(jsonText)
+//   //   console.log(chordProgression)
+// } catch (error) {
+//   console.error('Error parsing chord progression:', error.message)
+// }
 
 //
 // ここからchordProgressionをもとにしてPlayableSequenceを決められたルールでつくる
 //
+
+/**
+ * カウントイン用のMusicDataを生成する
+ * @param {ChordProgression} progression
+ * @param {number} beatDuration
+ * @returns {MusicData | null}
+ */
+function createCountInData (progression, beatDuration) {
+  if (progression.measures.length === 0) {
+    return null
+  }
+  const firstMeasure = progression.measures[0]
+  const countInNumerator = firstMeasure.numerator
+  const countInDuration = countInNumerator * beatDuration
+  const countInNotes = Array.from(
+    { length: countInNumerator },
+    (_, i) => new Note(i * beatDuration, beatDuration, null)
+  )
+  const countInTrack = new Track('finger', countInNotes)
+  return new MusicData(progression.tempo, countInDuration, [countInTrack])
+}
+
+/**
+ * ハイハットのトラックを生成する
+ * @param {ChordProgression} progression
+ * @param {number} beatDuration
+ * @returns {Track}
+ */
+function createHihatTrack (progression, beatDuration) {
+  const notes = []
+  let currentTime = 0
+  for (const measure of progression.measures) {
+    for (let i = 0; i < measure.numerator; i++) {
+      notes.push(new Note(currentTime + i * beatDuration, beatDuration, null))
+    }
+    currentTime += measure.numerator * beatDuration
+  }
+  return new Track('hihat', notes)
+}
+
+/**
+ * バスドラムのトラックを生成する
+ * @param {ChordProgression} progression
+ * @param {number} beatDuration
+ * @returns {Track}
+ */
+function createBassDrumTrack (progression, beatDuration) {
+  const notes = []
+  let currentTime = 0
+  for (const measure of progression.measures) {
+    notes.push(new Note(currentTime, beatDuration, null))
+    currentTime += measure.numerator * beatDuration
+  }
+  return new Track('bass-drum', notes)
+}
+
+/**
+ * スネアドラムのトラックを生成する
+ * - 奇数拍子: 各小節の最後の拍で1回叩く。
+ * - 偶数拍子: 基本は最後の拍で1回叩く。
+ *   - 例外: 4の倍数番目の小節では、最後の拍を長さ2/3と1/3の2つの音に分割して叩く。
+ * @param {ChordProgression} progression
+ * @param {number} beatDuration
+ * @returns {Track}
+ */
+function createSnareDrumTrack (progression, beatDuration) {
+  const notes = []
+  let currentTime = 0
+
+  progression.measures.forEach((measure, index) => {
+    const numerator = measure.numerator
+    const measureNumber = index + 1 // 1から始まる小節番号
+    const lastBeatStartTime = currentTime + (numerator - 1) * beatDuration
+
+    // 拍子が偶数か奇数かで処理を分岐
+    if (numerator % 2 === 0) {
+      // 偶数拍子の場合
+      // 4の倍数番目の小節かどうかをチェック
+      if (measureNumber % 4 === 0) {
+        // 例外パターン: 最後の拍を2/3と1/3に分割
+        const duration1 = beatDuration * (2 / 3)
+        const duration2 = beatDuration * (1 / 3)
+        const startTime2 = lastBeatStartTime + duration1
+
+        notes.push(new Note(lastBeatStartTime, duration1, null))
+        notes.push(new Note(startTime2, duration2, null))
+      } else {
+        // 基本パターン: 最後の拍で1回
+        notes.push(new Note(lastBeatStartTime, beatDuration, null))
+      }
+    } else {
+      // 奇数拍子の場合
+      // 基本パターン: 最後の拍で1回
+      notes.push(new Note(lastBeatStartTime, beatDuration, null))
+    }
+
+    // 次の小節の開始時間に移動
+    currentTime += numerator * beatDuration
+  })
+
+  return new Track('snare-drum', notes)
+}
+
+/**
+ * シンバルのトラックを生成する
+ * - 拍子が偶数なら、偶数拍で鳴らす (例: 4/4 -> 2, 4拍目)
+ * - 拍子が奇数なら、1拍目と最後の拍で鳴らす (例: 3/4 -> 1, 3拍目)
+ * @param {ChordProgression} progression
+ * @param {number} beatDuration
+ * @returns {Track}
+ */
+function createCymbalTrack (progression, beatDuration) {
+  const notes = []
+  let currentTime = 0
+  for (const measure of progression.measures) {
+    const numerator = measure.numerator
+
+    if (numerator % 2 === 0) {
+      // 偶数拍子の場合 (2拍目, 4拍目, ...)
+      // インデックスは0から始まるので、i=1, 3, 5... でNoteを追加
+      for (let i = 1; i < numerator; i += 2) {
+        notes.push(new Note(currentTime + i * beatDuration, beatDuration, null))
+      }
+    } else {
+      // 奇数拍子の場合
+      // 1拍目
+      notes.push(new Note(currentTime, beatDuration, null))
+      // 最後の拍 (numeratorが1より大きい場合のみ)
+      if (numerator > 1) {
+        notes.push(
+          new Note(
+            currentTime + (numerator - 1) * beatDuration,
+            beatDuration,
+            null
+          )
+        )
+      }
+    }
+
+    currentTime += numerator * beatDuration
+  }
+  return new Track('cymbal', notes)
+}
+
+/**
+ * ピアノのトラックを生成する
+ * @param {ChordProgression} progression
+ * @param {number} beatDuration
+ * @returns {Track}
+ */
+function createPianoTrack (progression, beatDuration) {
+  const notes = []
+  let currentTime = 0
+  for (const measure of progression.measures) {
+    for (let i = 0; i < measure.chords.length; i++) {
+      const chordStr = measure.chords[i]
+      if (chordStr) {
+        const rawNotes = parseChord(chordStr)
+        if (rawNotes) {
+          const pitches = assignOctavesToChordNotes(rawNotes, 3)
+          pitches.forEach(pitch =>
+            notes.push(
+              new Note(currentTime + i * beatDuration, beatDuration, pitch)
+            )
+          )
+        }
+      }
+    }
+    currentTime += measure.numerator * beatDuration
+  }
+  return new Track('piano', notes)
+}
 
 // --- ベースライン生成のためのヘルパー関数群 ---
 
@@ -158,15 +330,27 @@ function findClosestNote (lastNoteWithOctave, targetNoteName) {
 }
 
 /**
- * ベースの最低音（Eb1）を下回らないように音を補正する
+ * ベースの音域（Eb1 〜 E3）を逸脱しないように音を補正する
+ * - Eb1 を下回る場合は、下回らなくなるまで1オクターブ上げる
+ * - F3 を上回る場合は、上回らなくなるまで1オクターブ下げる
+ * @param {string} noteWithOctave 補正する音名 (例: "G3")
+ * @returns {string} 補正後の音名 (例: "G2")
  */
-function enforceMinimumPitch (noteWithOctave) {
-  const minPitchIndex = getNoteIndex('D#1') // Eb1 = D#1
+function enforceBassPitchRange (noteWithOctave) {
+  const minPitchIndex = getNoteIndex('D#1') // Eb1
+  const maxPitchIndex = getNoteIndex('F3')
   let noteIndex = getNoteIndex(noteWithOctave)
 
+  // 最低音より低い場合、オクターブを上げる
   while (noteIndex < minPitchIndex) {
-    noteIndex += 12 // 1オクターブ上げる
+    noteIndex += 12
   }
+
+  // 最高音より高い場合、オクターブを下げる
+  while (noteIndex >= maxPitchIndex) {
+    noteIndex -= 12
+  }
+
   return Range[noteIndex]
 }
 
@@ -203,75 +387,16 @@ function getApproachNoteName (
 }
 
 /**
- * ChordProgressionオブジェクトからPlayableSequenceオブジェクトを生成する
- * @param {ChordProgression} progression - 元となるChordProgressionオブジェクト
- * @returns {PlayableSequence} 生成されたPlayableSequenceオブジェクト
+ * ベースのトラックを生成する
+ * @param {ChordProgression} progression
+ * @param {number} beatDuration
+ * @returns {Track}
  */
-function createPlayableSequence (progression) {
-  const tempo = progression.tempo
-  const beatDuration = 60 / tempo
-
-  // --- カウントインデータ (countInData) の作成 ---
-  let countInData = null
-  if (progression.measures.length > 0) {
-    const firstMeasure = progression.measures[0]
-    const countInNumerator = firstMeasure.numerator
-    const countInDuration = countInNumerator * beatDuration
-    const countInNotes = Array.from(
-      { length: countInNumerator },
-      (_, i) => new Note(i * beatDuration, beatDuration, null)
-    )
-    const countInTrack = new Track('hihat', countInNotes)
-    countInData = new MusicData(tempo, countInDuration, [countInTrack])
-  }
-
-  // --- メインループ：ドラムとピアノのNote生成 ---
-  const mainLoopHihatNotes = []
-  const mainLoopPianoNotes = []
-  const mainLoopBassDrumNotes = []
-  const mainLoopSnareDrumNotes = []
-  let mainLoopDuration = 0
-
-  let currentTime = 0
-  for (const measure of progression.measures) {
-    const measureDuration = measure.numerator * beatDuration
-    // ハイハット
-    for (let i = 0; i < measure.numerator; i++) {
-      mainLoopHihatNotes.push(
-        new Note(currentTime + i * beatDuration, beatDuration, null)
-      )
-    }
-    // バスドラム
-    mainLoopBassDrumNotes.push(new Note(currentTime, beatDuration, null))
-    // スネアドラム
-    mainLoopSnareDrumNotes.push(
-      new Note(
-        currentTime + (measure.numerator - 1) * beatDuration,
-        beatDuration,
-        null
-      )
-    )
-    // ピアノ
-    for (let i = 0; i < measure.chords.length; i++) {
-      const chordStr = measure.chords[i]
-      if (chordStr) {
-        const rawNotes = parseChord(chordStr)
-        if (rawNotes) {
-          const pitches = assignOctavesToChordNotes(rawNotes, 3)
-          pitches.forEach(pitch =>
-            mainLoopPianoNotes.push(
-              new Note(currentTime + i * beatDuration, beatDuration, pitch)
-            )
-          )
-        }
-      }
-    }
-    currentTime += measureDuration
-  }
-  mainLoopDuration = currentTime
-
-  // --- メインループ：ベースラインのNote生成 ---
+function createBassTrack (progression, beatDuration) {
   const bassNotes = []
+  if (progression.measures.length === 0) {
+    return new Track('bass', bassNotes)
+  }
 
   // 1. コード進行をフラット化（コードと持続拍数のリストに変換）
   const flatChordList = []
@@ -293,7 +418,7 @@ function createPlayableSequence (progression) {
   }
 
   // 2. フラット化したリストを元にNoteを生成
-  currentTime = 0
+  let currentTime = 0
   let lastPlayedNote = null
 
   for (let i = 0; i < flatChordList.length; i++) {
@@ -354,7 +479,6 @@ function createPlayableSequence (progression) {
       const noteName = noteNamesToPlay[k]
       let noteWithOctave = findClosestNote(lastPlayedNote, noteName)
 
-      // 「低い5th」の処理
       const isLowerFifthPattern =
         (N === 5 && k === 3) ||
         (N >= 6 && k > 0 && k < N - 1 && (k - 1) % 4 === 3)
@@ -365,31 +489,52 @@ function createPlayableSequence (progression) {
         }
       }
 
-      noteWithOctave = enforceMinimumPitch(noteWithOctave)
+      noteWithOctave = enforceBassPitchRange(noteWithOctave)
 
       bassNotes.push(new Note(currentTime, beatDuration, noteWithOctave))
       lastPlayedNote = noteWithOctave
       currentTime += beatDuration
     }
   }
+  return new Track('bass', bassNotes)
+}
 
-  // --- 最終的なオブジェクトの組み立て ---
+/**
+ * ChordProgressionオブジェクトからPlayableSequenceオブジェクトを生成する
+ * @param {ChordProgression} progression - 元となるChordProgressionオブジェクト
+ * @returns {PlayableSequence} 生成されたPlayableSequenceオブジェクト
+ */
+export function createPlayableSequence (progression) {
+  const tempo = progression.tempo
+  const beatDuration = 60 / tempo
+
+  // 各ヘルパー関数を呼び出してトラックを生成
+  const countInData = createCountInData(progression, beatDuration)
+
   const mainLoopTracks = [
-    new Track('hihat', mainLoopHihatNotes),
-    new Track('piano', mainLoopPianoNotes),
-    new Track('bass-drum', mainLoopBassDrumNotes),
-    new Track('snare-drum', mainLoopSnareDrumNotes),
-    new Track('bass', bassNotes)
+    createHihatTrack(progression, beatDuration),
+    createPianoTrack(progression, beatDuration),
+    createBassDrumTrack(progression, beatDuration),
+    createSnareDrumTrack(progression, beatDuration),
+    createCymbalTrack(progression, beatDuration),
+    createBassTrack(progression, beatDuration)
   ]
+
+  // メインループの総再生時間を計算
+  let mainLoopDuration = 0
+  for (const measure of progression.measures) {
+    mainLoopDuration += measure.numerator * beatDuration
+  }
+
   const mainLoopData = new MusicData(tempo, mainLoopDuration, mainLoopTracks)
 
   return new PlayableSequence(mainLoopData, countInData)
 }
 
 // --- 実行と結果の表示 ---
-if (chordProgression) {
-  const playableSequence = createPlayableSequence(chordProgression)
+// if (chordProgression) {
+//   const playableSequence = createPlayableSequence(chordProgression)
 
-  // console.logだけだとオブジェクトの中身が見えにくいのでJSONに変換して表示
-  console.log(JSON.stringify(playableSequence, null, 2))
-}
+//   // console.logだけだとオブジェクトの中身が見えにくいのでJSONに変換して表示
+//   // console.log(JSON.stringify(playableSequence, null, 2))
+// }

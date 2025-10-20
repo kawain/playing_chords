@@ -7,7 +7,7 @@ function Home () {
       <h2>ピアノ</h2>
       <div>
         {Range.map(note => (
-          <button key={`piano-${note}`} onClick={() => playNote('Piano', note)}>
+          <button key={`piano-${note}`} onClick={() => playNote('piano', note)}>
             {note}
           </button>
         ))}
@@ -18,7 +18,7 @@ function Home () {
         {Range.map(note => (
           <button
             key={`guitar-${note}`}
-            onClick={() => playNote('Guitar', note)}
+            onClick={() => playNote('bass', note)}
           >
             {note}
           </button>
