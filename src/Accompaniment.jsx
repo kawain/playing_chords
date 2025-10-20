@@ -583,6 +583,11 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
           background-color: #cccccc;
           cursor: not-allowed;
         }
+        .volume-control {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       `}</style>
     </>
   )

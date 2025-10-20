@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { setMasterVolume, getMasterVolume } from './etc/sound' // sound.js から関数をインポート
+import { setMasterVolume, getMasterVolume } from './etc/sound'
 
 function Volume () {
   // 初期音量を getMasterVolume() から取得し、0-100の範囲に変換

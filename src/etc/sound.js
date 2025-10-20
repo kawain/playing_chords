@@ -108,7 +108,7 @@ export const SoundSources = {
 
   // --- ドラム類（ピッチシフトなし） ---
   finger: { path: 'finger.wav', pitch: null },
-  hihat: { path: 'switch.wav', pitch: null },
+  hihat: { path: 'hihat.wav', pitch: null },
   cymbal: { path: 'cymbal.wav', pitch: null },
   'bass-drum': { path: 'kick.wav', pitch: null },
   'snare-drum': { path: 'snare.wav', pitch: null }

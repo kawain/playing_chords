@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import Home from './Home'
+import Tuning from './Tuning'
+import Metronome from './Metronome'
 import Fretboard from './Fretboard'
 import DiatonicChords from './DiatonicChords'
 import Accompaniment from './Accompaniment'
@@ -8,7 +9,7 @@ import './index.css'
 
 function App () {
   // 表示するコンテンツを管理するステート
-  const [currentContent, setCurrentContent] = useState('Home')
+  const [currentContent, setCurrentContent] = useState('')
   // テンポを管理するステート
   const [tempo, setTempo] = useState(120) // 初期テンポを120BPMに設定
   // テンポの変更イベントハンドラー
@@ -39,6 +40,10 @@ function App () {
   // 表示するコンテンツを決定する関数
   const renderContent = () => {
     switch (currentContent) {
+      case 'Tuning':
+        return <Tuning />
+      case 'Metronome':
+        return <Metronome tempo={tempo} handleTempoChange={handleTempoChange} />
       case 'Fretboard':
         return <Fretboard />
       case 'DiatonicChords':
@@ -51,23 +56,27 @@ function App () {
             handleTempoChange={handleTempoChange}
           />
         )
-      case 'Home':
-        return <Home />
       default:
-        return <Home />
+        return ''
     }
   }
 
   return (
     <>
-      <h1>Vite + React</h1>
       <div className='container'>
+        <h1>ギター練習アプリ</h1>
         <nav>
           <button
-            onClick={() => setCurrentContent('Home')}
-            disabled={currentContent === 'Home'}
+            onClick={() => setCurrentContent('Tuning')}
+            disabled={currentContent === 'Tuning'}
           >
             <span>チューニング</span>
+          </button>
+          <button
+            onClick={() => setCurrentContent('Metronome')}
+            disabled={currentContent === 'Metronome'}
+          >
+            <span>メトロノーム</span>
           </button>
           <button
             onClick={() => setCurrentContent('Fretboard')}
@@ -88,9 +97,7 @@ function App () {
             <span>コード伴奏</span>
           </button>
         </nav>
-        <main>
-          {renderContent()}
-        </main>
+        <main>{renderContent()}</main>
       </div>
     </>
   )

@@ -143,10 +143,20 @@ function createHihatTrack (progression, beatDuration) {
   let currentTime = 0
   for (const measure of progression.measures) {
     for (let i = 0; i < measure.numerator; i++) {
-      notes.push(new Note(currentTime + i * beatDuration, beatDuration, null))
+      if (i % 2 !== 0) {
+        const startTime1 = currentTime + i * beatDuration
+        const duration1 = beatDuration * (2 / 3)
+        const duration2 = beatDuration * (1 / 3)
+        const startTime2 = startTime1 + duration1
+        notes.push(new Note(startTime1, duration1, null))
+        notes.push(new Note(startTime2, duration2, null))
+      } else {
+        notes.push(new Note(currentTime + i * beatDuration, beatDuration, null))
+      }
     }
     currentTime += measure.numerator * beatDuration
   }
+
   return new Track('hihat', notes)
 }
 
@@ -516,7 +526,7 @@ export function createPlayableSequence (progression) {
     createPianoTrack(progression, beatDuration),
     createBassDrumTrack(progression, beatDuration),
     createSnareDrumTrack(progression, beatDuration),
-    createCymbalTrack(progression, beatDuration),
+    // createCymbalTrack(progression, beatDuration),
     createBassTrack(progression, beatDuration)
   ]
 
