@@ -14,7 +14,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
   const [actionType, setActionType] = useState('')
   const [progressionTitle, setProgressionTitle] = useState('My New Progression')
   const fileInputRef = useRef(null)
-  const { play, stop, isPlaying } = usePlayback()
+  const { play, stop, isPlaying, currentMeasureIndex } = usePlayback()
   const [loopCount, setLoopCount] = useState(4)
   const MAX_LOOP_COUNT = 100
 
@@ -66,7 +66,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
   }
 
   const handleExecuteAction = () => {
-    if (selectedMeasureIndex === null) {
+    if (actionType !== 'deleteAll' && selectedMeasureIndex === null) {
       alert('操作する小節を選択してください。')
       return
     }
@@ -75,18 +75,36 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
       return
     }
 
-    const currentMeasures = [...measures]
-    const measureToOperate = currentMeasures[selectedMeasureIndex]
+    // 「全部削除する」の場合の特別な処理
+    if (actionType === 'deleteAll') {
+      if (window.confirm('全部削除されますがよろしいですか？')) {
+        setMeasures([])
+        setSelectedMeasureIndex(null)
+        setActionType('')
+      }
+      return
+    }
+
+    let updatedMeasures = [...measures]
+    const measureToOperate = updatedMeasures[selectedMeasureIndex]
 
     switch (actionType) {
+      case 'copyBefore': {
+        const copiedMeasureBefore = new Measure(
+          measureToOperate.numerator,
+          measureToOperate.denominator,
+          [...measureToOperate.chords]
+        )
+        updatedMeasures.splice(selectedMeasureIndex, 0, copiedMeasureBefore)
+        break
+      }
       case 'copyAfter': {
         const copiedMeasureAfter = new Measure(
           measureToOperate.numerator,
           measureToOperate.denominator,
           [...measureToOperate.chords]
         )
-        currentMeasures.splice(selectedMeasureIndex + 1, 0, copiedMeasureAfter)
-        setMeasures(currentMeasures)
+        updatedMeasures.splice(selectedMeasureIndex + 1, 0, copiedMeasureAfter)
         break
       }
       case 'copyEnd': {
@@ -95,20 +113,18 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
           measureToOperate.denominator,
           [...measureToOperate.chords]
         )
-        setMeasures([...currentMeasures, copiedMeasureEnd])
+        updatedMeasures.push(copiedMeasureEnd)
         break
       }
       case 'delete': {
-        currentMeasures.splice(selectedMeasureIndex, 1)
-        setMeasures(currentMeasures)
+        updatedMeasures.splice(selectedMeasureIndex, 1)
         setSelectedMeasureIndex(null)
         break
       }
       default:
         break
     }
-    setActionType('')
-    setMeasures(currentMeasures)
+    setMeasures(updatedMeasures)
   }
 
   const handleExport = () => {
@@ -204,10 +220,13 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
   }
 
   const handlePlay = () => {
+    setSelectedMeasureIndex(null)
+
     if (measures.length === 0) {
       alert('演奏する小節がありません。')
       return
     }
+
     try {
       const progression = new ChordProgression(
         progressionTitle,
@@ -250,108 +269,126 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
 
   return (
     <>
-      <h1>Accompaniment</h1>
-      <h2>小節入力</h2>
-      <div>
-        <div>
-          <label htmlFor='numerator-input'>拍子の分子:</label>
-          <input
-            id='numerator-input'
-            type='number'
-            value={numerator}
-            onChange={handleNumeratorChange}
-            min='1'
-          />
-        </div>
-        <div>
-          <label htmlFor='denominator-input'>拍子の分母:</label>
-          <input
-            id='denominator-input'
-            type='number'
-            value={denominator}
-            onChange={handleDenominatorChange}
-            min='1'
-          />
-        </div>
-        <div>
-          <button onClick={handleCreateMeasure}>小節作成</button>
-        </div>
-      </div>
+      <h1>コード伴奏</h1>
 
       <div className='measures-container'>
-        {measures.map((measure, measureIndex) => (
-          <div
-            key={measureIndex}
-            className={`measure-block ${
-              selectedMeasureIndex === measureIndex ? 'selected' : ''
-            }`}
-          >
-            <div className='measure-header'>
-              <label>
-                <input
-                  type='radio'
-                  name='selectedMeasure'
-                  value={measureIndex}
-                  checked={selectedMeasureIndex === measureIndex}
-                  onChange={handleSelectMeasure}
-                />
-                小節 {measureIndex + 1} ({measure.numerator}/
-                {measure.denominator}拍子)
-              </label>
+        {measures.map((measure, measureIndex) => {
+          const isHighlighted = isPlaying
+            ? currentMeasureIndex === measureIndex
+            : selectedMeasureIndex === measureIndex
+
+          return (
+            <div
+              key={measureIndex}
+              className={`measure-block ${isHighlighted ? 'selected' : ''}`}
+            >
+              <div className='measure-header'>
+                <label>
+                  <input
+                    type='radio'
+                    name='selectedMeasure'
+                    value={measureIndex}
+                    checked={selectedMeasureIndex === measureIndex}
+                    onChange={handleSelectMeasure}
+                    disabled={isPlaying}
+                  />
+                  小節 {measureIndex + 1} ({measure.numerator}/
+                  {measure.denominator}拍子)
+                </label>
+              </div>
+              <div className='chord-inputs'>
+                {measure.chords.map((chordName, chordIndex) => (
+                  <input
+                    key={chordIndex}
+                    type='text'
+                    value={chordName}
+                    onChange={event =>
+                      handleChordChange(
+                        measureIndex,
+                        chordIndex,
+                        event.target.value
+                      )
+                    }
+                    list='codes'
+                  />
+                ))}
+              </div>
             </div>
-            <div className='chord-inputs'>
-              {measure.chords.map((chordName, chordIndex) => (
-                <input
-                  key={chordIndex}
-                  type='text'
-                  value={chordName}
-                  onChange={event =>
-                    handleChordChange(
-                      measureIndex,
-                      chordIndex,
-                      event.target.value
-                    )
-                  }
-                  placeholder={`コード ${chordIndex + 1}`}
-                  list='codes'
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
 
-      {/* 小節操作パネル */}
+      <h3>小節作成</h3>
+      <div className='time-signature'>
+        <div>
+          <div>
+            <label htmlFor='numerator-input'>拍子の分子: </label>
+            <input
+              id='numerator-input'
+              type='number'
+              value={numerator}
+              onChange={handleNumeratorChange}
+              min='1'
+            />
+          </div>
+          <div>
+            <label htmlFor='denominator-input'>拍子の分母: </label>
+            <input
+              id='denominator-input'
+              type='number'
+              value={denominator}
+              onChange={handleDenominatorChange}
+              min='1'
+            />
+          </div>
+        </div>
+        <div>
+          <button onClick={handleCreateMeasure} disabled={isPlaying}>
+            小節作成
+          </button>
+        </div>
+      </div>
+
+      <h3>選択した小節の操作</h3>
       <div className='measure-actions'>
-        <h3>選択した小節の操作</h3>
         <select value={actionType} onChange={handleActionTypeChange}>
           <option value=''>操作を選択してください</option>
-          <option value='copyAfter'>この直後コピー</option>
+          <option value='copyBefore'>この直前へコピー</option>
+          <option value='copyAfter'>この直後へコピー</option>
           <option value='copyEnd'>一番最後にコピー</option>
           <option value='delete'>削除する</option>
+          <option value='deleteAll'>全部削除する</option>
         </select>
         <button
           onClick={handleExecuteAction}
-          disabled={selectedMeasureIndex === null || !actionType}
+          disabled={
+            isPlaying ||
+            !actionType ||
+            (actionType !== 'deleteAll' && selectedMeasureIndex === null)
+          }
         >
-          選択した小節を実行する
+          実行する
         </button>
       </div>
 
-      {/* エクスポート/インポートパネル */}
+      <h3>ファイル操作</h3>
       <div className='file-operations'>
-        <h3>ファイル操作</h3>
-        <button onClick={handleExport} disabled={measures.length === 0}>
+        <button
+          onClick={handleExport}
+          disabled={measures.length === 0 || isPlaying}
+        >
           エクスポート (JSON)
         </button>
         <input
           type='file'
           ref={fileInputRef}
           onChange={handleFileImport}
-          accept='.json' // JSONファイルのみを受け入れる
-          style={{ display: 'none' }} // 非表示にする
+          accept='.json'
+          style={{ display: 'none' }}
         />
-        <button onClick={handleImportButtonClick}>インポート (JSON)</button>
+        <button onClick={handleImportButtonClick} disabled={isPlaying}>
+          インポート (JSON)
+        </button>
       </div>
 
       <div className='controls-panel'>
@@ -361,15 +398,14 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
           handleTempoChange={handleTempoChange}
         />
 
+        <h3>移調 (キー)</h3>
         <div className='transpose-control'>
-          <h3>移調 (キー)</h3>
           <select
             defaultValue='0'
             onChange={handleTranspose}
             disabled={measures.length === 0 || isPlaying}
             aria-label='Transpose'
           >
-            {/* -11から+11までのオプションを動的に生成 */}
             {Array.from({ length: 23 }, (_, i) => i - 11).map(val => (
               <option key={val} value={val}>
                 {val > 0 ? `+${val}` : val}
@@ -378,8 +414,8 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
           </select>
         </div>
 
+        <h3>繰り返し</h3>
         <div className='loop-control'>
-          <h3>繰り返し</h3>
           <input
             type='number'
             min='1'
@@ -395,9 +431,8 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
         <Volume />
       </div>
 
-      {/* 再生ボタン */}
+      <h3>演奏</h3>
       <div className='playback-controls'>
-        <h3>演奏</h3>
         <button
           onClick={handlePlay}
           disabled={isPlaying || measures.length === 0}
@@ -409,7 +444,6 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
         </button>
       </div>
 
-      {/* コード候補のdatalist */}
       <datalist id='codes'>
         <option value='C'></option>
         <option value='Cmaj7'></option>
@@ -472,123 +506,6 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
         <option value='B7'></option>
         <option value='Bm7b5'></option>
       </datalist>
-      {/* 簡単なスタイリングのためのCSSを追加 */}
-      <style>{`
-        .measures-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          margin-top: 20px;
-        }
-        .measure-block {
-          border: 1px solid #ccc;
-          padding: 15px;
-          border-radius: 8px;
-        }
-        .measure-block.selected {
-          border-color: #007bff;
-          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-          background-color: #e0f7fa;
-        }
-        .measure-header {
-          margin-bottom: 10px;
-        }
-        .measure-header label {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          cursor: pointer;
-        }
-        .chord-inputs {
-          display: flex;
-          gap: 10px;
-          flex-wrap: wrap;
-        }
-        .chord-inputs input {
-          width: 80px;
-          padding: 5px;
-          border: 1px solid #eee;
-          border-radius: 4px;
-        }
-        .measure-actions,
-        .file-operations {
-          margin-top: 30px;
-          padding: 15px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          background-color: #f9f9f9;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-        .measure-actions h3,
-        .file-operations h3 {
-          margin: 0;
-          font-size: 1em;
-          white-space: nowrap; /* テキストの折り返しを防ぐ */
-        }
-        .measure-actions select,
-        .measure-actions button,
-        .file-operations button {
-          padding: 8px 12px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          white-space: nowrap; /* テキストの折り返しを防ぐ */
-        }
-        .measure-actions button,
-        .file-operations button {
-          background-color: #007bff;
-          color: white;
-          cursor: pointer;
-          transition: background-color 0.2s ease;
-        }
-        .measure-actions button:hover:not(:disabled),
-        .file-operations button:hover:not(:disabled) {
-          background-color: #0056b3;
-        }
-        .measure-actions button:disabled,
-        .file-operations button:disabled {
-          background-color: #cccccc;
-          cursor: not-allowed;
-        }
-        .playback-controls {
-          margin-top: 30px;
-          padding: 15px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          background-color: #f0f4c3; /* 少し色を変えて区別 */
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-        .playback-controls h3 {
-          margin: 0;
-          font-size: 1em;
-        }
-        .playback-controls button {
-          padding: 8px 12px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          cursor: pointer;
-        }
-        .playback-controls button:first-of-type {
-            background-color: #4CAF50; /* Green */
-            color: white;
-        }
-        .playback-controls button:last-of-type {
-            background-color: #f44336; /* Red */
-            color: white;
-        }
-        .playback-controls button:disabled {
-          background-color: #cccccc;
-          cursor: not-allowed;
-        }
-        .volume-control {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-      `}</style>
     </>
   )
 }

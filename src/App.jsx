@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 import Tuning from './Tuning'
 import Metronome from './Metronome'
-import Fretboard from './Fretboard'
-import DiatonicChords from './DiatonicChords'
 import Accompaniment from './Accompaniment'
+
 import { loadAllSounds } from './etc/sound'
 import './index.css'
 
@@ -44,10 +43,6 @@ function App () {
         return <Tuning />
       case 'Metronome':
         return <Metronome tempo={tempo} handleTempoChange={handleTempoChange} />
-      case 'Fretboard':
-        return <Fretboard />
-      case 'DiatonicChords':
-        return <DiatonicChords />
       case 'Accompaniment':
         return (
           <Accompaniment
@@ -77,18 +72,6 @@ function App () {
             disabled={currentContent === 'Metronome'}
           >
             <span>メトロノーム</span>
-          </button>
-          <button
-            onClick={() => setCurrentContent('Fretboard')}
-            disabled={currentContent === 'Fretboard'}
-          >
-            <span>指板音当てクイズ</span>
-          </button>
-          <button
-            onClick={() => setCurrentContent('DiatonicChords')}
-            disabled={currentContent === 'DiatonicChords'}
-          >
-            <span>ダイアトニックコード・クイズ</span>
           </button>
           <button
             onClick={() => setCurrentContent('Accompaniment')}

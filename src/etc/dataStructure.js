@@ -78,11 +78,14 @@ export class MusicData {
    * @param {number} tempo - このセクションのテンポ（BPM）
    * @param {number} duration - このセクションの全長（秒）
    * @param {Track[]} tracks - このセクションに含まれるTrackオブジェクトの配列
+   * @param {Array<{index: number, startTime: number}>} [measureTimings=[]] - 各小節の開始時間情報
    */
-  constructor (tempo, duration, tracks) {
+  constructor (tempo, duration, tracks, measureTimings = []) {
+    // ★ 追加
     this.tempo = tempo
     this.duration = duration
     this.tracks = tracks
+    this.measureTimings = measureTimings
   }
 }
 

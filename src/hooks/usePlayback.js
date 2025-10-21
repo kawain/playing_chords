@@ -3,8 +3,11 @@ import { getAudioContext, playScheduledNote } from '../etc/sound'
 
 export function usePlayback () {
   const [isPlaying, setIsPlaying] = useState(false)
+  const [currentMeasureIndex, setCurrentMeasureIndex] = useState(null)
+
   const scheduledSources = useRef([])
   const endTimer = useRef(null)
+  const measureUpdateTimers = useRef([])
 
   const stop = useCallback(() => {
     scheduledSources.current.forEach(source => {
@@ -20,15 +23,15 @@ export function usePlayback () {
       clearTimeout(endTimer.current)
       endTimer.current = null
     }
+
+    measureUpdateTimers.current.forEach(timerId => clearTimeout(timerId))
+    measureUpdateTimers.current = []
+
     setIsPlaying(false)
+    setCurrentMeasureIndex(null)
     console.log('Playback stopped.')
   }, [])
 
-  /**
-   * PlayableSequenceオブジェクトを受け取って再生を開始する
-   * @param {import('../etc/dataStructure').PlayableSequence} playableSequence
-   * @param {number} [loopCount=1] - メインループの繰り返し回数
-   */
   const play = useCallback(
     (playableSequence, loopCount = 1) => {
       stop()
@@ -46,7 +49,6 @@ export function usePlayback () {
       let currentTimeOffset = 0
       let totalDuration = 0
 
-      // 1. カウントイン部分をスケジュール (これはループしない)
       if (playableSequence.countInData) {
         const data = playableSequence.countInData
         data.tracks.forEach(track => {
@@ -63,17 +65,14 @@ export function usePlayback () {
         totalDuration += data.duration
       }
 
-      // 2. メインループ部分を、指定された回数だけ繰り返しスケジュールする
       const mainData = playableSequence.mainLoopData
       if (mainData.duration > 0) {
-        // 無限ループを防ぐため duration が0より大きい場合のみ
         for (let i = 0; i < loopCount; i++) {
           mainData.tracks.forEach(track => {
             track.notes.forEach(note => {
               const source = playScheduledNote(
                 track.instrument,
                 note.pitch,
-                // ↓↓↓ ループのオフセット時間を加算する
                 scheduleStartTime +
                   currentTimeOffset +
                   i * mainData.duration +
@@ -82,8 +81,27 @@ export function usePlayback () {
               if (source) sources.push(source)
             })
           })
+
+          if (mainData.measureTimings) {
+            mainData.measureTimings.forEach(timing => {
+              const measureStartTime =
+                scheduleStartTime +
+                currentTimeOffset +
+                i * mainData.duration +
+                timing.startTime
+
+              const delayInMs =
+                (measureStartTime - audioContext.currentTime) * 1000
+
+              if (delayInMs >= 0) {
+                const timerId = setTimeout(() => {
+                  setCurrentMeasureIndex(timing.index)
+                }, delayInMs)
+                measureUpdateTimers.current.push(timerId)
+              }
+            })
+          }
         }
-        // 全体の再生時間に、ループ回数分のメインループ時間を加算
         totalDuration += mainData.duration * loopCount
       }
 
@@ -95,15 +113,16 @@ export function usePlayback () {
         )}s, Loop: ${loopCount} times.`
       )
 
-      // 3. 全ての再生が終わるタイミングで isPlaying を false にする
       endTimer.current = setTimeout(() => {
         setIsPlaying(false)
+        setCurrentMeasureIndex(null)
         endTimer.current = null
+        measureUpdateTimers.current = []
         console.log('Playback finished.')
       }, totalDuration * 1000 + 200)
     },
     [stop]
   )
 
-  return { play, stop, isPlaying }
+  return { play, stop, isPlaying, currentMeasureIndex }
 }

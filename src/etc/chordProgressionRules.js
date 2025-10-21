@@ -526,17 +526,26 @@ export function createPlayableSequence (progression) {
     createPianoTrack(progression, beatDuration),
     createBassDrumTrack(progression, beatDuration),
     createSnareDrumTrack(progression, beatDuration),
-    // createCymbalTrack(progression, beatDuration),
     createBassTrack(progression, beatDuration)
   ]
 
-  // メインループの総再生時間を計算
+  // メインループの総再生時間と、各小節の開始時間を同時に計算する
+  const measureTimings = []
   let mainLoopDuration = 0
-  for (const measure of progression.measures) {
-    mainLoopDuration += measure.numerator * beatDuration
-  }
+  progression.measures.forEach((measure, index) => {
+    // この小節が始まる時間を記録
+    measureTimings.push({ index: index, startTime: mainLoopDuration })
+    // この小節の長さを計算し、総再生時間に加算
+    const measureDuration = measure.numerator * beatDuration
+    mainLoopDuration += measureDuration
+  })
 
-  const mainLoopData = new MusicData(tempo, mainLoopDuration, mainLoopTracks)
+  const mainLoopData = new MusicData(
+    tempo,
+    mainLoopDuration,
+    mainLoopTracks,
+    measureTimings
+  )
 
   return new PlayableSequence(mainLoopData, countInData)
 }
