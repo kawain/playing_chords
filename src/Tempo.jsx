@@ -4,8 +4,8 @@ function Tempo ({ disabled = false, tempo, handleTempoChange }) {
       <h3>テンポ調整 (BPM)</h3>
       <input
         type='range'
-        min='40'
-        max='240'
+        min='30'
+        max='300'
         value={tempo}
         onChange={handleTempoChange}
         disabled={disabled}

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import Tuning from './Tuning'
 import Metronome from './Metronome'
+import Phrase from './Phrase'
 import Accompaniment from './Accompaniment'
-
 import { loadAllSounds } from './etc/sound'
 import './index.css'
 
@@ -11,6 +11,7 @@ function App () {
   const [currentContent, setCurrentContent] = useState('')
   // テンポを管理するステート
   const [tempo, setTempo] = useState(120) // 初期テンポを120BPMに設定
+
   // テンポの変更イベントハンドラー
   const handleTempoChange = event => {
     const newTempo = parseInt(event.target.value, 10)
@@ -43,6 +44,8 @@ function App () {
         return <Tuning />
       case 'Metronome':
         return <Metronome tempo={tempo} handleTempoChange={handleTempoChange} />
+      case 'Phrase':
+        return <Phrase tempo={tempo} handleTempoChange={handleTempoChange} />
       case 'Accompaniment':
         return (
           <Accompaniment
@@ -72,6 +75,12 @@ function App () {
             disabled={currentContent === 'Metronome'}
           >
             <span>メトロノーム</span>
+          </button>
+          <button
+            onClick={() => setCurrentContent('Phrase')}
+            disabled={currentContent === 'Phrase'}
+          >
+            <span>フレーズ</span>
           </button>
           <button
             onClick={() => setCurrentContent('Accompaniment')}

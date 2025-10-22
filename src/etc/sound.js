@@ -104,6 +104,7 @@ export const Range = [
 export const SoundSources = {
   // chordProgressionRules.js で使われている楽器名をキーにします
   piano: { path: 'piano_C4.wav', pitch: 'C4' },
+  guitar: { path: 'Guitar-C4.wav', pitch: 'C4' },
   bass: { path: 'fingered-bass-guitar_C2.wav', pitch: 'C2' },
 
   // --- ドラム類（ピッチシフトなし） ---
@@ -190,10 +191,7 @@ function initAudioContext () {
     masterGainNode = audioContext.createGain()
     masterGainNode.gain.value = 0.5
     masterGainNode.connect(audioContext.destination)
-    console.log(
-      'Master Gain Node initialized with volume:',
-      masterGainNode.gain.value
-    )
+    console.log('Master Gain Node initialized with volume:', masterGainNode.gain.value)
   }
 }
 
@@ -232,9 +230,7 @@ async function loadSound (filename) {
 export async function loadAllSounds () {
   initAudioContext()
   try {
-    const loadPromises = Object.values(SoundSources).map(source =>
-      loadSound(source.path)
-    )
+    const loadPromises = Object.values(SoundSources).map(source => loadSound(source.path))
     await Promise.all(loadPromises)
     console.log('All base sounds loaded.')
   } catch (err) {
@@ -294,9 +290,7 @@ export async function playNote (instrument, note) {
   initAudioContext()
 
   if (!audioContext || !masterGainNode) {
-    console.warn(
-      'AudioContext or Master Gain Node not initialized, cannot play note.'
-    )
+    console.warn('AudioContext or Master Gain Node not initialized, cannot play note.')
     return
   }
 
@@ -312,9 +306,7 @@ export async function playNote (instrument, note) {
   let buffer = audioBuffers[url]
 
   if (!buffer) {
-    console.log(
-      `Sound buffer for ${path} not found, attempting to load dynamically...`
-    )
+    console.log(`Sound buffer for ${path} not found, attempting to load dynamically...`)
     try {
       buffer = await loadSound(path)
     } catch (error) {
