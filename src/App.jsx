@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Tuning from './Tuning'
 import Metronome from './Metronome'
+import Chord from './Chord'
 import Phrase from './Phrase'
 import Accompaniment from './Accompaniment'
 import { loadAllSounds } from './etc/sound'
@@ -44,6 +45,8 @@ function App () {
         return <Tuning />
       case 'Metronome':
         return <Metronome tempo={tempo} handleTempoChange={handleTempoChange} />
+      case 'Chord':
+        return <Chord />
       case 'Phrase':
         return <Phrase tempo={tempo} handleTempoChange={handleTempoChange} />
       case 'Accompaniment':
@@ -75,6 +78,12 @@ function App () {
             disabled={currentContent === 'Metronome'}
           >
             <span>メトロノーム</span>
+          </button>
+          <button
+            onClick={() => setCurrentContent('Chord')}
+            disabled={currentContent === 'Chord'}
+          >
+            <span>コード・ポジション</span>
           </button>
           <button
             onClick={() => setCurrentContent('Phrase')}
