@@ -4,7 +4,7 @@ import { allChords } from './etc/chordForm'
 function Code () {
   return (
     <>
-      <h1>コード・ポジション</h1>
+      <h1>コードポジション</h1>
       <p className='center'>C 以外はルートの位置をずらして読み替えてください。</p>
       <div className='code-position-container'>
         {allChords.map(chordType => (

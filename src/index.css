@@ -246,3 +246,38 @@ nav button {
   margin-bottom: 20px;
   border-radius: 10px;
 }
+
+/* ChordPlaying */
+.create-pattern {
+  text-align: center;
+
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px 0;
+  }
+}
+
+.measure-block-playing {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.measure-block-playing.selected {
+  background-color: #ccc;
+  color: #121212;
+  border-color: #007bff;
+  box-shadow: 0 0 10px 3px rgba(0, 123, 255, 0.5);
+}
+
+.measure-block-playing div {
+  text-align: center;
+  flex: 1;
+  margin: 20px 0;
+}
