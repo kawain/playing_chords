@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Measure, ChordProgression } from './etc/dataStructure'
 import { createPlayableSequence } from './etc/chordProgressionRules'
 import { usePlayback } from './hooks/usePlayback'
@@ -103,6 +103,12 @@ function ChordPlaying ({ tempo, handleTempoChange }) {
   const handleStop = () => {
     stop()
   }
+
+  useEffect(() => {
+    return () => {
+      stop()
+    }
+  }, [stop])
 
   return (
     <>

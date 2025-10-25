@@ -22,8 +22,7 @@ const midiToNoteName = midiNumber => {
 }
 
 function Phrase ({ tempo, handleTempoChange }) {
-  const [selectedPhraseIndex, setSelectedPhraseIndex] = useState(0)
-  const [abcString, setAbcString] = useState(() => formatAbcString(phrases[0]))
+  const [abcString, setAbcString] = useState('')
   const notationRef = useRef(null)
   const visualObjRef = useRef(null)
   const [isPlaybackReady, setIsPlaybackReady] = useState(false)
@@ -31,14 +30,12 @@ function Phrase ({ tempo, handleTempoChange }) {
   const scheduledSourcesRef = useRef([])
   const playbackTimeoutRef = useRef(null)
 
-  const handlePhraseChange = event => {
-    const newIndex = parseInt(event.target.value, 10)
-    setSelectedPhraseIndex(newIndex)
-    setAbcString(formatAbcString(phrases[newIndex]))
+  const handleChange = event => {
+    setAbcString(event.target.value)
   }
 
   useEffect(() => {
-    if (!notationRef.current) return
+    if (!abcString) return
 
     setIsPlaybackReady(false)
 
@@ -78,13 +75,11 @@ function Phrase ({ tempo, handleTempoChange }) {
           // 2) prime() を呼んで実際のオーディオバッファとタイミング情報を作る
           //    prime() が解決したら visualObj に noteTimings 等が入ります。
           const primeResult = await synth.prime()
-          console.log('synth.prime() result:', primeResult)
+          // console.log('synth.prime() result:', primeResult)
 
           // 確認：visualObj.noteTimings があるかチェック
           if (!visualObj.noteTimings || visualObj.noteTimings.length === 0) {
-            console.warn(
-              'visualObj.noteTimings が見つかりません。代替で setTiming を試行します。'
-            )
+            console.warn('visualObj.noteTimings が見つかりません。代替で setTiming を試行します。')
             // 代替措置：明示的にタイミングを設定して noteTimings を作らせる
             // visualObj.getBpm() が使えるので BPM を取得して setTiming を呼ぶ
             try {
@@ -179,24 +174,36 @@ function Phrase ({ tempo, handleTempoChange }) {
       console.log('再生が完了しました。')
     }, totalDurationMs)
 
-    console.log(
-      `${scheduledSourcesRef.current.length}個のノートを再生スケジュールに登録しました。`
-    )
+    console.log(`${scheduledSourcesRef.current.length}個のノートを再生スケジュールに登録しました。`)
   }
+
+  useEffect(() => {
+    return () => {
+      stopPlayback()
+    }
+  }, [])
 
   return (
     <>
       <h2>フレーズ練習</h2>
-      <select value={selectedPhraseIndex} onChange={handlePhraseChange}>
-        {phrases.map((phrase, index) => (
-          <option key={index} value={index}>
-            {phrase.header.T}
-          </option>
-        ))}
-      </select>
-      <div>
+      <div className='phrases-select'>
+        <select value={abcString} onChange={handleChange} disabled={isPlaying}>
+          <option value=''>選んでください</option>
+          {phrases.map((phrase, index) => (
+            <option key={index} value={phrase.abcNotation}>
+              {phrase.title}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className='abcjs-area'>
+        <div ref={notationRef} />
+      </div>
+
+      <div className='phrases-play-button-area'>
         <button onClick={playWithCustomSound} disabled={!isPlaybackReady || isPlaying}>
-          {isPlaybackReady ? (isPlaying ? '再生中...' : 'ギターの音で再生') : '準備中...'}
+          {isPlaybackReady ? (isPlaying ? '再生中...' : '再生') : '準備中...'}
         </button>
 
         {isPlaying && (
@@ -206,7 +213,6 @@ function Phrase ({ tempo, handleTempoChange }) {
         )}
       </div>
 
-      <div ref={notationRef} />
       <Volume />
 
       <Tempo disabled={isPlaying} tempo={tempo} handleTempoChange={handleTempoChange} />

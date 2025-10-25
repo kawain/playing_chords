@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Measure, ChordProgression } from './etc/dataStructure'
 import { createPlayableSequence } from './etc/chordProgressionRules'
 import { transposeChordProgression } from './etc/transposition'
@@ -31,11 +31,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
           const updatedChords = measure.chords.map((chord, cIdx) =>
             cIdx === chordIndex ? newChordName : chord
           )
-          return new Measure(
-            measure.numerator,
-            measure.denominator,
-            updatedChords
-          )
+          return new Measure(measure.numerator, measure.denominator, updatedChords)
         }
         return measure
       })
@@ -129,20 +125,14 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
 
   const handleExport = () => {
     try {
-      const progressionData = new ChordProgression(
-        progressionTitle,
-        tempo,
-        measures
-      )
+      const progressionData = new ChordProgression(progressionTitle, tempo, measures)
       const jsonString = JSON.stringify(progressionData, null, 2)
       const blob = new Blob([jsonString], { type: 'application/json' })
       const url = URL.createObjectURL(blob)
 
       const a = document.createElement('a')
       a.href = url
-      a.download = `${
-        progressionTitle.replace(/\s/g, '_') || 'chord_progression'
-      }.json`
+      a.download = `${progressionTitle.replace(/\s/g, '_') || 'chord_progression'}.json`
       document.body.appendChild(a)
       a.click()
       document.body.removeChild(a)
@@ -228,11 +218,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
     }
 
     try {
-      const progression = new ChordProgression(
-        progressionTitle,
-        Number(tempo),
-        measures
-      )
+      const progression = new ChordProgression(progressionTitle, Number(tempo), measures)
       const sequence = createPlayableSequence(progression)
       play(sequence, loopCount)
     } catch (error) {
@@ -254,10 +240,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
 
     const currentProgression = new ChordProgression('temp', tempo, measures)
 
-    const transposedProgression = transposeChordProgression(
-      currentProgression,
-      semitones
-    )
+    const transposedProgression = transposeChordProgression(currentProgression, semitones)
 
     setMeasures(transposedProgression.measures)
 
@@ -266,6 +249,12 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
 
     event.target.value = 0
   }
+
+  useEffect(() => {
+    return () => {
+      stop()
+    }
+  }, [stop])
 
   return (
     <>
@@ -278,10 +267,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
             : selectedMeasureIndex === measureIndex
 
           return (
-            <div
-              key={measureIndex}
-              className={`measure-block ${isHighlighted ? 'selected' : ''}`}
-            >
+            <div key={measureIndex} className={`measure-block ${isHighlighted ? 'selected' : ''}`}>
               <div className='measure-header'>
                 <label>
                   <input
@@ -292,8 +278,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
                     onChange={handleSelectMeasure}
                     disabled={isPlaying}
                   />
-                  小節 {measureIndex + 1} ({measure.numerator}/
-                  {measure.denominator}拍子)
+                  小節 {measureIndex + 1} ({measure.numerator}/{measure.denominator}拍子)
                 </label>
               </div>
               <div className='chord-inputs'>
@@ -303,11 +288,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
                     type='text'
                     value={chordName}
                     onChange={event =>
-                      handleChordChange(
-                        measureIndex,
-                        chordIndex,
-                        event.target.value
-                      )
+                      handleChordChange(measureIndex, chordIndex, event.target.value)
                     }
                     list='codes'
                   />
@@ -373,10 +354,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
 
       <h3>ファイル操作</h3>
       <div className='file-operations'>
-        <button
-          onClick={handleExport}
-          disabled={measures.length === 0 || isPlaying}
-        >
+        <button onClick={handleExport} disabled={measures.length === 0 || isPlaying}>
           エクスポート (JSON)
         </button>
         <input
@@ -392,11 +370,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
       </div>
 
       <div className='controls-panel'>
-        <Tempo
-          disabled={isPlaying}
-          tempo={tempo}
-          handleTempoChange={handleTempoChange}
-        />
+        <Tempo disabled={isPlaying} tempo={tempo} handleTempoChange={handleTempoChange} />
 
         <h3>移調 (キー)</h3>
         <div className='transpose-control'>
@@ -433,10 +407,7 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
 
       <h3>演奏</h3>
       <div className='playback-controls'>
-        <button
-          onClick={handlePlay}
-          disabled={isPlaying || measures.length === 0}
-        >
+        <button onClick={handlePlay} disabled={isPlaying || measures.length === 0}>
           {isPlaying ? '再生中...' : '演奏する'}
         </button>
         <button onClick={handleStop} disabled={!isPlaying}>

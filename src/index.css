@@ -287,3 +287,26 @@ nav button {
   flex: 1;
   margin: 20px 0;
 }
+
+/* Phrase */
+.phrases-select {
+  text-align: center;
+  select {
+    padding: 10px;
+  }
+}
+
+.abcjs-area {
+  background-color: #ccc;
+  color: #121212;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.phrases-play-button-area {
+  text-align: center;
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}

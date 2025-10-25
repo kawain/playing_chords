@@ -350,7 +350,7 @@ export async function playNote (instrument, note) {
 export function setMasterVolume (volume) {
   if (masterGainNode) {
     masterGainNode.gain.value = volume
-    console.log('Master volume set to:', volume)
+    // console.log('Master volume set to:', volume)
   } else {
     console.warn('Master Gain Node not initialized. Cannot set volume.')
   }
