@@ -249,12 +249,18 @@ nav button {
 
 /* ChordPlaying */
 .create-pattern {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  select {
+    padding: 10px 20px;
+  }
 
   button {
     padding: 10px 20px;
     cursor: pointer;
-    margin: 20px 0;
   }
 }
 

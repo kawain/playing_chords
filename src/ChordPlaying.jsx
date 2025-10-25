@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { Measure, ChordProgression } from './etc/dataStructure'
 import { createPlayableSequence } from './etc/chordProgressionRules'
 import { usePlayback } from './hooks/usePlayback'
@@ -6,13 +6,32 @@ import Volume from './Volume'
 import Tempo from './Tempo'
 
 const chordCycles = ['C', 'F', 'Bb', 'Eb', 'Ab', 'C#', 'F#', 'B', 'E', 'A', 'D', 'G']
-const chordKinds = ['maj7', '7', 'm7', 'm7(b5)']
+const chordKinds = [
+  'maj7',
+  '7',
+  'm7',
+  'm7(b5)',
+  '6',
+  'm6',
+  'dim7',
+  'aug7',
+  'maj7(9)',
+  '6(9)',
+  'm7(9)',
+  '7(#9)',
+  '7(9)',
+  '7(b9)',
+  '7(#11)',
+  '7(13)',
+  '7(b13)'
+]
 
-function ChordPlaying ({ tempo, setTempo, handleTempoChange }) {
+function ChordPlaying ({ tempo, handleTempoChange }) {
   const { play, stop, isPlaying, currentMeasureIndex } = usePlayback()
   const [loopCount, setLoopCount] = useState(4)
   const MAX_LOOP_COUNT = 100
   const [chordProgression, setChordProgression] = useState(null)
+  const [selectedChordKind, setSelectedChordKind] = useState('ランダム')
 
   const handleLoopCountChange = event => {
     let value = parseInt(event.target.value, 10)
@@ -25,16 +44,27 @@ function ChordPlaying ({ tempo, setTempo, handleTempoChange }) {
     setLoopCount(value)
   }
 
+  const handleChordKindChange = event => {
+    setSelectedChordKind(event.target.value)
+  }
+
   const handleCreatePattern = () => {
     // 1. ランダムなコードサイクルの配列を作成
     const randomIndex = Math.floor(Math.random() * chordCycles.length)
     const newCycle = [...chordCycles.slice(randomIndex), ...chordCycles.slice(0, randomIndex)]
 
-    // 2. 各ルート音にランダムなコード種別を付与
+    // 2. 各ルート音にコード種別を付与
     const finalChords = newCycle.map(rootNote => {
-      const randomKindIndex = Math.floor(Math.random() * chordKinds.length)
-      const randomKind = chordKinds[randomKindIndex]
-      return rootNote + randomKind
+      let kind
+      if (selectedChordKind === 'ランダム') {
+        // 「ランダム」が選択されている場合は、従来通りランダムに選択
+        const randomKindIndex = Math.floor(Math.random() * chordKinds.length)
+        kind = chordKinds[randomKindIndex]
+      } else {
+        // 特定のコード種別が選択されている場合は、その種別を使用
+        kind = selectedChordKind
+      }
+      return rootNote + kind
     })
 
     // 3. finalChordsを元にMeasureオブジェクトの配列を作成
@@ -44,7 +74,6 @@ function ChordPlaying ({ tempo, setTempo, handleTempoChange }) {
     })
 
     // 4. ChordProgressionオブジェクトを作成
-    // ここでは画面上のテンポを初期値として設定
     const newProgression = new ChordProgression('sample', tempo, measures)
 
     // 5. useStateに保存
@@ -58,8 +87,11 @@ function ChordPlaying ({ tempo, setTempo, handleTempoChange }) {
     }
 
     try {
-      // 現在のUIのテンポを反映させた新しいChordProgressionオブジェクトを作成
-      const progressionWithCurrentTempo = new ChordProgression(chordProgression.title, Number(tempo), chordProgression.measures)
+      const progressionWithCurrentTempo = new ChordProgression(
+        chordProgression.title,
+        Number(tempo),
+        chordProgression.measures
+      )
       const sequence = createPlayableSequence(progressionWithCurrentTempo)
       play(sequence, loopCount)
     } catch (error) {
@@ -77,6 +109,14 @@ function ChordPlaying ({ tempo, setTempo, handleTempoChange }) {
       <h1>ランダムコード演奏</h1>
 
       <div className='create-pattern'>
+        <select value={selectedChordKind} onChange={handleChordKindChange}>
+          <option value='ランダム'>ランダム</option>
+          {chordKinds.map(kind => (
+            <option key={kind} value={kind}>
+              {kind}
+            </option>
+          ))}
+        </select>
         <button onClick={handleCreatePattern} disabled={isPlaying}>
           コードパターン作成
         </button>
@@ -87,7 +127,10 @@ function ChordPlaying ({ tempo, setTempo, handleTempoChange }) {
           chordProgression.measures.map((measure, measureIndex) => {
             const isHighlighted = isPlaying && currentMeasureIndex === measureIndex
             return (
-              <div key={measureIndex} className={`measure-block-playing ${isHighlighted ? 'selected' : ''}`}>
+              <div
+                key={measureIndex}
+                className={`measure-block-playing ${isHighlighted ? 'selected' : ''}`}
+              >
                 {measure.chords.map((chordName, chordIndex) => (
                   <div key={chordIndex}>{chordName || '-'}</div>
                 ))}
@@ -100,7 +143,15 @@ function ChordPlaying ({ tempo, setTempo, handleTempoChange }) {
         <Tempo disabled={isPlaying} tempo={tempo} handleTempoChange={handleTempoChange} />
         <h3>繰り返し</h3>
         <div className='loop-control'>
-          <input type='number' min='1' max={MAX_LOOP_COUNT} value={loopCount} onChange={handleLoopCountChange} disabled={isPlaying} aria-label='Loop Count' />
+          <input
+            type='number'
+            min='1'
+            max={MAX_LOOP_COUNT}
+            value={loopCount}
+            onChange={handleLoopCountChange}
+            disabled={isPlaying}
+            aria-label='Loop Count'
+          />
           <span>回</span>
         </div>
 
