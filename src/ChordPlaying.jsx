@@ -145,6 +145,16 @@ function ChordPlaying ({ tempo, handleTempoChange }) {
           })}
       </div>
 
+      <h3>演奏</h3>
+      <div className='playback-controls'>
+        <button onClick={handlePlay} disabled={isPlaying || !chordProgression}>
+          {isPlaying ? '再生中...' : '演奏する'}
+        </button>
+        <button onClick={handleStop} disabled={!isPlaying}>
+          停止する
+        </button>
+      </div>
+
       <div className='controls-panel'>
         <Tempo disabled={isPlaying} tempo={tempo} handleTempoChange={handleTempoChange} />
         <h3>繰り返し</h3>
@@ -162,16 +172,6 @@ function ChordPlaying ({ tempo, handleTempoChange }) {
         </div>
 
         <Volume />
-      </div>
-
-      <h3>演奏</h3>
-      <div className='playback-controls'>
-        <button onClick={handlePlay} disabled={isPlaying || !chordProgression}>
-          {isPlaying ? '再生中...' : '演奏する'}
-        </button>
-        <button onClick={handleStop} disabled={!isPlaying}>
-          停止する
-        </button>
       </div>
     </>
   )

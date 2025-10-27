@@ -352,6 +352,16 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
         </button>
       </div>
 
+      <h3>演奏</h3>
+      <div className='playback-controls'>
+        <button onClick={handlePlay} disabled={isPlaying || measures.length === 0}>
+          {isPlaying ? '再生中...' : '演奏する'}
+        </button>
+        <button onClick={handleStop} disabled={!isPlaying}>
+          停止する
+        </button>
+      </div>
+
       <h3>ファイル操作</h3>
       <div className='file-operations'>
         <button onClick={handleExport} disabled={measures.length === 0 || isPlaying}>
@@ -403,16 +413,6 @@ function Accompaniment ({ tempo, setTempo, handleTempoChange }) {
         </div>
 
         <Volume />
-      </div>
-
-      <h3>演奏</h3>
-      <div className='playback-controls'>
-        <button onClick={handlePlay} disabled={isPlaying || measures.length === 0}>
-          {isPlaying ? '再生中...' : '演奏する'}
-        </button>
-        <button onClick={handleStop} disabled={!isPlaying}>
-          停止する
-        </button>
       </div>
 
       <datalist id='codes'>

@@ -5,18 +5,11 @@ import { phrases } from './etc/phrases'
 import Volume from './Volume'
 import Tempo from './Tempo'
 
-const formatAbcString = phrase => {
-  if (!phrase) return ''
-  const headerString = Object.entries(phrase.header)
-    .map(([key, value]) => `${key}:${value}`)
-    .join('\n')
-  return `${headerString}\n${phrase.body}`
-}
-
 const midiToNoteName = midiNumber => {
   if (midiNumber < 21 || midiNumber > 108) return null
   const noteNames = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B']
-  const octave = Math.floor(midiNumber / 12) - 1
+  // オクターブの計算を-1から-2に変更して、1オクターブ低くする
+  const octave = Math.floor(midiNumber / 12) - 2
   const noteIndex = midiNumber % 12
   return noteNames[noteIndex] + octave
 }
@@ -50,6 +43,14 @@ function Phrase ({ tempo, handleTempoChange }) {
     const visualObjs = abcjs.renderAbc(notationRef.current, tempoAppliedAbcString, {
       responsive: 'resize',
       add_classes: true
+      // tablature: [
+      //   {
+      //     instrument: 'guitar'
+      //     // 必要に応じてチューニングやカポの設定などを追加できます
+      //     // tuning: ["E,", "A,", "D", "G", "B", "e"],
+      //     // capo: 7,
+      //   }
+      // ]
     })
 
     if (visualObjs.length > 0) {

@@ -189,7 +189,7 @@ function initAudioContext () {
     audioContext = new (window.AudioContext || window.webkitAudioContext)()
     console.log('AudioContext initialized.')
     masterGainNode = audioContext.createGain()
-    masterGainNode.gain.value = 0.5
+    masterGainNode.gain.value = 0.3
     masterGainNode.connect(audioContext.destination)
     console.log('Master Gain Node initialized with volume:', masterGainNode.gain.value)
   }
@@ -204,10 +204,7 @@ async function loadSound (filename) {
   if (audioBuffers[url]) return audioBuffers[url]
 
   if (!audioContext) {
-    console.error(
-      'AudioContext is not initialized when attempting to load sound:',
-      filename
-    )
+    console.error('AudioContext is not initialized when attempting to load sound:', filename)
     return null
   }
 
@@ -310,18 +307,13 @@ export async function playNote (instrument, note) {
     try {
       buffer = await loadSound(path)
     } catch (error) {
-      console.error(
-        `Failed to dynamically load sound for ${instrument} (${note}):`,
-        error
-      )
+      console.error(`Failed to dynamically load sound for ${instrument} (${note}):`, error)
       return
     }
   }
 
   if (!buffer) {
-    console.warn(
-      `Sound buffer for ${instrument} (${note}) is still not available after attempt to load.`
-    )
+    console.warn(`Sound buffer for ${instrument} (${note}) is still not available after attempt to load.`)
     return
   }
 
@@ -364,5 +356,5 @@ export function getMasterVolume () {
   if (masterGainNode) {
     return masterGainNode.gain.value
   }
-  return 0.5
+  return 0.3
 }

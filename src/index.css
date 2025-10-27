@@ -310,3 +310,25 @@ nav button {
     cursor: pointer;
   }
 }
+
+/* FretboardTrainer */
+.fretboard-trainer-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  input {
+    padding: 10px;
+    width: 70px;
+  }
+
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  select {
+    padding: 10px;
+  }
+}

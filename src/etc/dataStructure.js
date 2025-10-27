@@ -81,7 +81,6 @@ export class MusicData {
    * @param {Array<{index: number, startTime: number}>} [measureTimings=[]] - 各小節の開始時間情報
    */
   constructor (tempo, duration, tracks, measureTimings = []) {
-    // ★ 追加
     this.tempo = tempo
     this.duration = duration
     this.tracks = tracks
