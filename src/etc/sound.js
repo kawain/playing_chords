@@ -90,6 +90,8 @@ export const Range = [
   'C8'
 ]
 
+const soundFilePath = '/playing_chords/sounds'
+
 // ------------------------------------
 // 音源情報を一元管理するオブジェクト
 // ------------------------------------
@@ -200,7 +202,7 @@ function initAudioContext () {
  * @param {string} filename - `public/sounds/` 以下のファイル名 (例: "PianoA4.wav")
  */
 async function loadSound (filename) {
-  const url = `/sounds/${filename}`
+  const url = `${soundFilePath}/${filename}`
   if (audioBuffers[url]) return audioBuffers[url]
 
   if (!audioContext) {
@@ -255,7 +257,7 @@ export function playScheduledNote (instrument, note, when) {
     return null
   }
 
-  const url = `/sounds/${sourceInfo.path}`
+  const url = `${soundFilePath}/${sourceInfo.path}`
   const buffer = audioBuffers[url]
   if (!buffer) {
     console.warn(`Buffer for ${instrument} not loaded yet. Cannot play.`)
@@ -299,7 +301,7 @@ export async function playNote (instrument, note) {
   }
 
   const { path, pitch: basePitch } = sourceInfo
-  const url = `/sounds/${path}`
+  const url = `${soundFilePath}/${path}`
   let buffer = audioBuffers[url]
 
   if (!buffer) {
