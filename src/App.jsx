@@ -3,6 +3,7 @@ import Tuning from './Tuning'
 import Metronome from './Metronome'
 import FretboardTrainer from './FretboardTrainer'
 import Chord from './Chord'
+import Scale from './Scale'
 import Phrase from './Phrase'
 import ChordPlaying from './ChordPlaying'
 import Accompaniment from './Accompaniment'
@@ -51,6 +52,8 @@ function App () {
         return <FretboardTrainer tempo={tempo} handleTempoChange={handleTempoChange} />
       case 'Chord':
         return <Chord />
+      case 'Scale':
+        return <Scale />
       case 'Phrase':
         return <Phrase tempo={tempo} handleTempoChange={handleTempoChange} />
       case 'ChordPlaying':
@@ -78,6 +81,9 @@ function App () {
           </button>
           <button onClick={() => setCurrentContent('Chord')} disabled={currentContent === 'Chord'}>
             <span>コードポジション</span>
+          </button>
+          <button onClick={() => setCurrentContent('Scale')} disabled={currentContent === 'Scale'}>
+            <span>コードトーンとスケール</span>
           </button>
           <button onClick={() => setCurrentContent('Phrase')} disabled={currentContent === 'Phrase'}>
             <span>フレーズ</span>

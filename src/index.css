@@ -332,3 +332,25 @@ nav button {
     padding: 10px;
   }
 }
+
+/* Scale */
+.scale-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+
+  select {
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}
+
+#fretboard_svg {
+  background-color: #ccc;
+}
