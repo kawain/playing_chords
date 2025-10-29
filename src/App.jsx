@@ -70,30 +70,17 @@ function App () {
       <div className='container'>
         <h1>ギター練習アプリ</h1>
         <nav>
-          <button onClick={() => setCurrentContent('Tuning')} disabled={currentContent === 'Tuning'}>
-            <span>チューニング</span>
-          </button>
-          <button onClick={() => setCurrentContent('Metronome')} disabled={currentContent === 'Metronome'}>
-            <span>メトロノーム</span>
-          </button>
-          <button onClick={() => setCurrentContent('FretboardTrainer')} disabled={currentContent === 'FretboardTrainer'}>
-            <span>音符と弦番号</span>
-          </button>
-          <button onClick={() => setCurrentContent('Chord')} disabled={currentContent === 'Chord'}>
-            <span>コードポジション</span>
-          </button>
-          <button onClick={() => setCurrentContent('Scale')} disabled={currentContent === 'Scale'}>
-            <span>コードトーンとスケール</span>
-          </button>
-          <button onClick={() => setCurrentContent('Phrase')} disabled={currentContent === 'Phrase'}>
-            <span>フレーズ</span>
-          </button>
-          <button onClick={() => setCurrentContent('ChordPlaying')} disabled={currentContent === 'ChordPlaying'}>
-            <span>ランダムコード演奏</span>
-          </button>
-          <button onClick={() => setCurrentContent('Accompaniment')} disabled={currentContent === 'Accompaniment'}>
-            <span>コード入力演奏</span>
-          </button>
+          <select value={currentContent} onChange={e => setCurrentContent(e.target.value)}>
+            <option value=''>コンテンツを選択してください</option>
+            <option value='Tuning'>チューニング</option>
+            <option value='Metronome'>メトロノーム</option>
+            <option value='FretboardTrainer'>音符と弦番号</option>
+            <option value='Chord'>コードポジション</option>
+            <option value='Scale'>コードトーンとスケール</option>
+            <option value='Phrase'>フレーズ</option>
+            <option value='ChordPlaying'>ランダムコード演奏</option>
+            <option value='Accompaniment'>コード入力演奏</option>
+          </select>
         </nav>
         <main>{renderContent()}</main>
       </div>

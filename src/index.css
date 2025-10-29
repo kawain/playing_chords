@@ -37,8 +37,7 @@ nav {
   gap: 20px;
 }
 
-nav button {
-  font-size: 0.7rem;
+nav select {
   padding: 5px 10px;
   cursor: pointer;
 }
@@ -229,6 +228,13 @@ nav button {
 }
 
 /* コード・ポジション */
+.code-position-select {
+  margin: 20px 0;
+  text-align: center;
+  select {
+    padding: 10px;
+  }
+}
 .code-position {
   max-width: 1200px;
   margin: 0 auto;
