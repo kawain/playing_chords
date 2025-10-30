@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Tuning from './Tuning'
 import Metronome from './Metronome'
-import FretboardTrainer from './FretboardTrainer'
+import FingerboardNotes from './FingerboardNotes'
 import Chord from './Chord'
 import Scale from './Scale'
 import Phrase from './Phrase'
@@ -48,8 +48,8 @@ function App () {
         return <Tuning />
       case 'Metronome':
         return <Metronome tempo={tempo} handleTempoChange={handleTempoChange} />
-      case 'FretboardTrainer':
-        return <FretboardTrainer tempo={tempo} handleTempoChange={handleTempoChange} />
+      case 'FingerboardNotes':
+        return <FingerboardNotes tempo={tempo} handleTempoChange={handleTempoChange} />
       case 'Chord':
         return <Chord />
       case 'Scale':
@@ -74,7 +74,7 @@ function App () {
             <option value=''>コンテンツを選択してください</option>
             <option value='Tuning'>チューニング</option>
             <option value='Metronome'>メトロノーム</option>
-            <option value='FretboardTrainer'>音符と弦番号</option>
+            <option value='FingerboardNotes'>指板の音を覚える</option>
             <option value='Chord'>コードポジション</option>
             <option value='Scale'>コードトーンとスケール</option>
             <option value='Phrase'>フレーズ</option>
