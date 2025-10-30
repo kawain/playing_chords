@@ -11,6 +11,7 @@ const chordKinds = [
   '7',
   'm7',
   'm7(b5)',
+  'mMaj7',
   '6',
   'm6',
   'dim7',

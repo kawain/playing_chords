@@ -360,3 +360,37 @@ nav select {
 #fretboard_svg {
   background-color: #ccc;
 }
+
+.saved-fretboard {
+  background-color: #ccc;
+}
+
+.save-button {
+  margin: 20px 0;
+  text-align: center;
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}
+
+.saved-data-container {
+  margin: 20px 0;
+  text-align: center;
+
+  div {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+  h4 {
+    margin: 20px 0;
+  }
+
+  button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}

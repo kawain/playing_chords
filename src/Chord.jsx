@@ -34,6 +34,7 @@ function Code () {
       <div className='code-position'>
         {selectedChord.map((chordData, i) => (
           <div key={i}>
+            <h3>{chordData.name}</h3>
             <ChordDiagram configure={chordData.configure} chord={chordData.chord} />
           </div>
         ))}

@@ -18,30 +18,30 @@ const HarmonicMinorScale = [0, 2, 3, 5, 7, 8, 11]
 export const scales = {
   // Major Scale Modes
   'メジャー、アイオニアン': { base: MajorScale, start: 0 },
-  '├ ドリアン（メジャー2音目〜）': { base: MajorScale, start: 1 },
-  '├ フリジアン（メジャー3音目〜）': { base: MajorScale, start: 2 },
-  '├ リディアン（メジャー4音目〜）': { base: MajorScale, start: 3 },
-  '├ ミクソリディアン（メジャー5音目〜）': { base: MajorScale, start: 4 },
-  '├ ナチュラル・マイナー、エオリアン（メジャー6音目〜）': { base: MajorScale, start: 5 },
-  '└ ロクリアン（メジャー7音目〜）': { base: MajorScale, start: 6 },
+  'ドリアン（メジャー2音目〜）': { base: MajorScale, start: 1 },
+  'フリジアン（メジャー3音目〜）': { base: MajorScale, start: 2 },
+  'リディアン（メジャー4音目〜）': { base: MajorScale, start: 3 },
+  'ミクソリディアン（メジャー5音目〜）': { base: MajorScale, start: 4 },
+  'ナチュラル・マイナー、エオリアン（メジャー6音目〜）': { base: MajorScale, start: 5 },
+  'ロクリアン（メジャー7音目〜）': { base: MajorScale, start: 6 },
 
   // Melodic Minor Scale Modes
   'メロディック・マイナー': { base: MelodicMinorScale, start: 0 },
-  '├ ドリアン♭2（メロディック・マイナー2音目〜）': { base: MelodicMinorScale, start: 1 },
-  '├ リディアン・オーグメント（メロディック・マイナー3音目〜）': { base: MelodicMinorScale, start: 2 },
-  '├ リディアン・ドミナント（メロディック・マイナー4音目〜）': { base: MelodicMinorScale, start: 3 },
-  '├ ミクソリディアン♭6（メロディック・マイナー5音目〜）': { base: MelodicMinorScale, start: 4 },
-  '├ ロクリアン♮2（メロディック・マイナー6音目〜）': { base: MelodicMinorScale, start: 5 },
-  '└ オルタード（メロディック・マイナー7音目〜）': { base: MelodicMinorScale, start: 6 },
+  'ドリアン♭2（メロディック・マイナー2音目〜）': { base: MelodicMinorScale, start: 1 },
+  'リディアン・オーグメント（メロディック・マイナー3音目〜）': { base: MelodicMinorScale, start: 2 },
+  'リディアン・ドミナント（メロディック・マイナー4音目〜）': { base: MelodicMinorScale, start: 3 },
+  'ミクソリディアン♭6（メロディック・マイナー5音目〜）': { base: MelodicMinorScale, start: 4 },
+  'ロクリアン♮2（メロディック・マイナー6音目〜）': { base: MelodicMinorScale, start: 5 },
+  'オルタード（メロディック・マイナー7音目〜）': { base: MelodicMinorScale, start: 6 },
 
   // Harmonic Minor Scale Modes
   'ハーモニック・マイナー': { base: HarmonicMinorScale, start: 0 },
-  '├ ロクリアン♮6（ハーモニック・マイナー2音目〜）': { base: HarmonicMinorScale, start: 1 },
-  '├ アイオニアン#5（ハーモニック・マイナー3音目〜）': { base: HarmonicMinorScale, start: 2 },
-  '├ ドリアン#4（ハーモニック・マイナー4音目〜）': { base: HarmonicMinorScale, start: 3 },
-  '├ フリジアン・ドミナント（ハーモニック・マイナー5音目〜）': { base: HarmonicMinorScale, start: 4 },
-  '├ リディアン#2（ハーモニック・マイナー6音目〜）': { base: HarmonicMinorScale, start: 5 },
-  '└ ウルトラ・ロクリアン（ハーモニック・マイナー7音目〜）': { base: HarmonicMinorScale, start: 6 },
+  'ロクリアン♮6（ハーモニック・マイナー2音目〜）': { base: HarmonicMinorScale, start: 1 },
+  'アイオニアン#5（ハーモニック・マイナー3音目〜）': { base: HarmonicMinorScale, start: 2 },
+  'ドリアン#4（ハーモニック・マイナー4音目〜）': { base: HarmonicMinorScale, start: 3 },
+  'フリジアン・ドミナント（ハーモニック・マイナー5音目〜）': { base: HarmonicMinorScale, start: 4 },
+  'リディアン#2（ハーモニック・マイナー6音目〜）': { base: HarmonicMinorScale, start: 5 },
+  'ウルトラ・ロクリアン（ハーモニック・マイナー7音目〜）': { base: HarmonicMinorScale, start: 6 },
 
   // Other Scales (モードに属さないもの)
   ホールトーン: { base: [0, 2, 4, 6, 8, 10], start: 0 },

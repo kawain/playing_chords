@@ -34,13 +34,11 @@ function fretsStrings (d, e) {
   g.setAttribute('font-size', '14')
 
   let fretNum = 1
-
   for (const coords of coordinate) {
     const text = d.createElementNS('http://www.w3.org/2000/svg', 'text')
     text.setAttribute('x', coords[0].toString())
     text.setAttribute('y', coords[1].toString())
     text.setAttribute('fill', '#000')
-    // フレット番号
     text.textContent = fretNum.toString()
     fretNum += 1
     g.appendChild(text)
@@ -56,7 +54,6 @@ function fretsStrings (d, e) {
  */
 function drawLine (d, e, kind) {
   let coordinate
-
   if (kind === 1) {
     // 弦 (横線)
     coordinate = [
@@ -70,7 +67,7 @@ function drawLine (d, e, kind) {
   } else {
     // フレット (縦線)
     coordinate = [
-      [20, 40, 20, 140, 3], // ナット部分
+      [20, 40, 20, 140, 3],
       [55, 40, 55, 140, 1],
       [90, 40, 90, 140, 1],
       [125, 40, 125, 140, 1],
@@ -95,7 +92,6 @@ function drawLine (d, e, kind) {
       [790, 40, 790, 140, 1]
     ]
   }
-
   for (const coords of coordinate) {
     const line = d.createElementNS('http://www.w3.org/2000/svg', 'line')
     line.setAttribute('x1', coords[0].toString())
@@ -115,18 +111,17 @@ function drawLine (d, e, kind) {
  */
 function circleMark (d, e) {
   const coordinate = [
-    [107, 90], // 3フレット
-    [177, 90], // 5フレット
-    [247, 90], // 7フレット
-    [317, 90], // 9フレット
-    [423, 70], // 12フレット (上下2つ)
-    [423, 110], // 12フレット (上下2つ)
-    [528, 90], // 15フレット
-    [598, 90], // 17フレット
-    [668, 90], // 19フレット
-    [738, 90] // 21フレット
+    [107, 90],
+    [177, 90],
+    [247, 90],
+    [317, 90],
+    [423, 70],
+    [423, 110],
+    [528, 90],
+    [598, 90],
+    [668, 90],
+    [738, 90]
   ]
-
   for (const coords of coordinate) {
     const circle = d.createElementNS('http://www.w3.org/2000/svg', 'circle')
     circle.setAttribute('cx', coords[0].toString())
@@ -143,44 +138,33 @@ function circleMark (d, e) {
  * @param {SVGElement} e - SVG要素（fretboard_svg）
  */
 function fretPosition (d, e) {
-  // フレットの中心X座標 (0番目は1フレット、21番目は22フレットに対応)
-  const cx = [
-    38, 73, 108, 143, 178, 213, 248, 283, 318, 353, 388, 423, 458, 493, 528, 563, 598, 633, 668,
-    703, 738, 773
-  ]
-  // 弦のY座標 (0番目は一番上の弦、5番目は一番下の弦)
+  const cx = [38, 73, 108, 143, 178, 213, 248, 283, 318, 353, 388, 423, 458, 493, 528, 563, 598, 633, 668, 703, 738, 773]
   const cy = [40, 60, 80, 100, 120, 140]
 
   for (let stringIndex = 0; stringIndex < cy.length; stringIndex++) {
     for (let fretboardCxIndex = 0; fretboardCxIndex < cx.length; fretboardCxIndex++) {
       const group = d.createElementNS('http://www.w3.org/2000/svg', 'g')
-      group.setAttribute('opacity', '0') // 初期状態では非表示
+      group.setAttribute('opacity', '0')
       group.classList.add('fret-position-group')
-      group.setAttribute('data-string-index', stringIndex)
-      group.setAttribute('data-fretboard-cx-index', fretboardCxIndex)
-      const groupId = `svg_position_group${stringIndex}-${fretboardCxIndex}`
-      group.setAttribute('id', groupId)
+      group.setAttribute('data-string-index', stringIndex.toString())
+      group.setAttribute('data-fretboard-cx-index', fretboardCxIndex.toString())
 
       const circle = d.createElementNS('http://www.w3.org/2000/svg', 'circle')
       circle.setAttribute('cx', cx[fretboardCxIndex].toString())
       circle.setAttribute('cy', cy[stringIndex].toString())
       circle.setAttribute('r', '8')
       circle.setAttribute('fill', 'red')
-      const circleId = `svg_position_circle${stringIndex}-${fretboardCxIndex}`
-      circle.setAttribute('id', circleId)
       group.appendChild(circle)
 
       const text = d.createElementNS('http://www.w3.org/2000/svg', 'text')
       text.setAttribute('x', cx[fretboardCxIndex].toString())
       text.setAttribute('y', cy[stringIndex].toString())
-      text.setAttribute('text-anchor', 'middle') // 水平方向の中央揃え
-      text.setAttribute('dominant-baseline', 'middle') // 垂直方向の中央揃え
-      text.setAttribute('fill', 'white') // テキストの色を白にして見やすくする
+      text.setAttribute('text-anchor', 'middle')
+      text.setAttribute('dominant-baseline', 'middle')
+      text.setAttribute('fill', 'white')
       text.classList.add('fret-position-text')
-      const textId = `svg_position_text${stringIndex}-${fretboardCxIndex}`
-      text.setAttribute('id', textId)
       text.setAttribute('font-size', '10')
-      text.textContent = '' // 初期状態ではテキストなし
+      text.textContent = ''
       group.appendChild(text)
 
       e.appendChild(group)
@@ -190,53 +174,46 @@ function fretPosition (d, e) {
 
 /**
  * 特定のフレットポジションに音名を表示します。
- * @param {number} stringIndex - 弦のインデックス (0-5, 一番上が0)
- * @param {number} fretboardCxIndex - フレットボード上のX座標のインデックス (0は1フレット、21は22フレットに対応)
- * @param {string} noteName - 表示する音名 (例: "A", "C#", "G")
- * @param {string} circleColor - 丸の色 (例: "red", "green", "blue")
- * @param {string} textColor - テキストの色 (例: "white", "black")
+ * @param {number} stringIndex
+ * @param {number} fretboardCxIndex
+ * @param {string} noteName
+ * @param {string} circleColor
+ * @param {string} textColor
+ * @param {SVGElement} targetSvgElement
  */
-function showFretMark (
-  stringIndex,
-  fretboardCxIndex,
-  noteName,
-  circleColor = 'blue',
-  textColor = 'white'
-) {
-  const groupId = `svg_position_group${stringIndex}-${fretboardCxIndex}`
-  const group = document.getElementById(groupId)
+function showFretMark (stringIndex, fretboardCxIndex, noteName, circleColor = 'blue', textColor = 'white', targetSvgElement) {
+  const group = targetSvgElement.querySelector(`g[data-string-index="${stringIndex}"][data-fretboard-cx-index="${fretboardCxIndex}"]`)
+
   if (group) {
     group.setAttribute('opacity', '1')
 
-    const circleId = `svg_position_circle${stringIndex}-${fretboardCxIndex}`
-    const circle = document.getElementById(circleId)
+    const circle = group.querySelector('circle')
     if (circle) {
       circle.setAttribute('fill', circleColor)
     }
 
-    const textId = `svg_position_text${stringIndex}-${fretboardCxIndex}`
-    const textElement = document.getElementById(textId)
+    const textElement = group.querySelector('text')
     if (textElement) {
       textElement.textContent = noteName
       textElement.setAttribute('fill', textColor)
     }
   } else {
-    console.warn(`ID: ${groupId} の要素グループが見つかりません。`)
+    console.warn(`要素グループが見つかりません。stringIndex: ${stringIndex}, fretboardCxIndex: ${fretboardCxIndex}`)
   }
 }
 
 /**
  * 特定のフレットポジションの音名表示を非表示にします。
- * @param {number} stringIndex - 弦のインデックス
- * @param {number} fretboardCxIndex - フレットボード上のX座標のインデックス
+ * @param {number} stringIndex
+ * @param {number} fretboardCxIndex
+ * @param {SVGElement} targetSvgElement
  */
-function hideFretMark (stringIndex, fretboardCxIndex) {
-  const groupId = `svg_position_group${stringIndex}-${fretboardCxIndex}`
-  const group = document.getElementById(groupId)
+function hideFretMark (stringIndex, fretboardCxIndex, targetSvgElement) {
+  const group = targetSvgElement.querySelector(`g[data-string-index="${stringIndex}"][data-fretboard-cx-index="${fretboardCxIndex}"]`)
   if (group) {
     group.setAttribute('opacity', '0')
   } else {
-    console.warn(`ID: ${groupId} の要素グループが見つかりません。`)
+    console.warn(`要素グループが見つかりません。stringIndex: ${stringIndex}, fretboardCxIndex: ${fretboardCxIndex}`)
   }
 }
 
@@ -246,11 +223,10 @@ function hideFretMark (stringIndex, fretboardCxIndex) {
  */
 function initFretboardSvg (fretboardSvg) {
   if (!fretboardSvg) {
-    console.error("ID 'fretboard_svg' を持つSVG要素が見つかりません。")
+    console.error('描画対象のSVG要素が見つかりません。')
     return
   }
 
-  // 既存の要素をクリアして再描画
   fretboardSvg.innerHTML = ''
 
   const gTitle = document.createElementNS('http://www.w3.org/2000/svg', 'g')

@@ -19,25 +19,6 @@ const maj7 = [
     }
   },
   {
-    name: '6弦ルート',
-    configure: {
-      orientation: 'horizontal',
-      frets: 4,
-      position: 8
-    },
-    chord: {
-      fingers: [
-        [1, 'x'],
-        [2, 'x'],
-        [3, 2, '3'],
-        [4, 2, '7'],
-        [5, 'x'],
-        [6, 1, 'R']
-      ],
-      barres: []
-    }
-  },
-  {
     name: '5弦ルート',
     configure: {
       orientation: 'horizontal',
@@ -133,7 +114,6 @@ const maj7 = [
     }
   }
 ]
-
 const dominant7 = [
   {
     name: '6弦ルート',
@@ -146,25 +126,6 @@ const dominant7 = [
       fingers: [
         [1, 'x'],
         [2, 1, '5'],
-        [3, 2, '3'],
-        [4, 1, '7'],
-        [5, 'x'],
-        [6, 1, 'R']
-      ],
-      barres: []
-    }
-  },
-  {
-    name: '6弦ルート',
-    configure: {
-      orientation: 'horizontal',
-      frets: 4,
-      position: 8
-    },
-    chord: {
-      fingers: [
-        [1, 'x'],
-        [2, 'x'],
         [3, 2, '3'],
         [4, 1, '7'],
         [5, 'x'],
@@ -269,7 +230,6 @@ const dominant7 = [
     }
   }
 ]
-
 const m7 = [
   {
     name: '6弦ルート',
@@ -282,25 +242,6 @@ const m7 = [
       fingers: [
         [1, 'x'],
         [2, 1, '5'],
-        [3, 1, '3'],
-        [4, 1, '7'],
-        [5, 'x'],
-        [6, 1, 'R']
-      ],
-      barres: []
-    }
-  },
-  {
-    name: '6弦ルート',
-    configure: {
-      orientation: 'horizontal',
-      frets: 4,
-      position: 8
-    },
-    chord: {
-      fingers: [
-        [1, 'x'],
-        [2, 'x'],
         [3, 1, '3'],
         [4, 1, '7'],
         [5, 'x'],
@@ -405,7 +346,6 @@ const m7 = [
     }
   }
 ]
-
 const m7b5 = [
   {
     name: '6弦ルート',
@@ -484,7 +424,46 @@ const m7b5 = [
     }
   }
 ]
-
+const mmaj7 = [
+  {
+    name: '6弦ルート',
+    configure: {
+      orientation: 'horizontal',
+      frets: 4,
+      position: 8
+    },
+    chord: {
+      fingers: [
+        [1, 'x'],
+        [2, 1, '5'],
+        [3, 1, '3'],
+        [4, 2, '7'],
+        [5, 'x'],
+        [6, 1, 'R']
+      ],
+      barres: []
+    }
+  },
+  {
+    name: '5弦ルート',
+    configure: {
+      orientation: 'horizontal',
+      frets: 4,
+      position: 3
+    },
+    chord: {
+      fingers: [
+        [1, 'x'],
+        [2, 2, '3'],
+        [3, 2, '7'],
+        [4, 3, '5'],
+        [5, 1, 'R'],
+        [6, 'x']
+      ],
+      barres: []
+    }
+  }
+]
 const sixth = [
   {
     name: '6弦ルート',
@@ -497,25 +476,6 @@ const sixth = [
       fingers: [
         [1, 'x'],
         [2, 2, '5'],
-        [3, 3, '3'],
-        [4, 1, '6'],
-        [5, 'x'],
-        [6, 2, 'R']
-      ],
-      barres: []
-    }
-  },
-  {
-    name: '6弦ルート',
-    configure: {
-      orientation: 'horizontal',
-      frets: 4,
-      position: 7
-    },
-    chord: {
-      fingers: [
-        [1, 'x'],
-        [2, 'x'],
         [3, 3, '3'],
         [4, 1, '6'],
         [5, 'x'],
@@ -544,25 +504,6 @@ const sixth = [
     }
   },
   {
-    name: '5弦ルート',
-    configure: {
-      orientation: 'horizontal',
-      frets: 4,
-      position: 2
-    },
-    chord: {
-      fingers: [
-        [1, 'x'],
-        [2, 'x'],
-        [3, 1, '6'],
-        [4, 1, '3'],
-        [5, 2, 'R'],
-        [6, 'x']
-      ],
-      barres: []
-    }
-  },
-  {
     name: '4弦ルート',
     configure: {
       orientation: 'horizontal',
@@ -582,7 +523,6 @@ const sixth = [
     }
   }
 ]
-
 const minorsixth = [
   {
     name: '6弦ルート',
@@ -595,25 +535,6 @@ const minorsixth = [
       fingers: [
         [1, 'x'],
         [2, 2, '5'],
-        [3, 2, '3'],
-        [4, 1, '6'],
-        [5, 'x'],
-        [6, 2, 'R']
-      ],
-      barres: []
-    }
-  },
-  {
-    name: '6弦ルート',
-    configure: {
-      orientation: 'horizontal',
-      frets: 4,
-      position: 7
-    },
-    chord: {
-      fingers: [
-        [1, 'x'],
-        [2, 'x'],
         [3, 2, '3'],
         [4, 1, '6'],
         [5, 'x'],
@@ -642,25 +563,6 @@ const minorsixth = [
     }
   },
   {
-    name: '5弦ルート',
-    configure: {
-      orientation: 'horizontal',
-      frets: 4,
-      position: 1
-    },
-    chord: {
-      fingers: [
-        [1, 'x'],
-        [2, 'x'],
-        [3, 2, '6'],
-        [4, 1, '3'],
-        [5, 3, 'R'],
-        [6, 'x']
-      ],
-      barres: []
-    }
-  },
-  {
     name: '4弦ルート',
     configure: {
       orientation: 'horizontal',
@@ -680,7 +582,6 @@ const minorsixth = [
     }
   }
 ]
-
 const dim7 = [
   {
     name: '6弦ルート',
@@ -738,28 +639,8 @@ const dim7 = [
       ],
       barres: []
     }
-  },
-  {
-    name: '3弦ルート',
-    configure: {
-      orientation: 'horizontal',
-      frets: 4,
-      position: 4
-    },
-    chord: {
-      fingers: [
-        [1, 2, '7'],
-        [2, 1, '3'],
-        [3, 2, 'R'],
-        [4, 1, '5'],
-        [5, 'x'],
-        [6, 'x']
-      ],
-      barres: []
-    }
   }
 ]
-
 const aug7 = [
   {
     name: '6弦ルート',
@@ -800,7 +681,6 @@ const aug7 = [
     }
   }
 ]
-
 const maj79 = [
   {
     name: '6弦ルート',
@@ -841,7 +721,6 @@ const maj79 = [
     }
   }
 ]
-
 const sixth9 = [
   {
     name: '6弦ルート',
@@ -882,7 +761,6 @@ const sixth9 = [
     }
   }
 ]
-
 const m79 = [
   {
     name: '6弦ルート',
@@ -923,7 +801,6 @@ const m79 = [
     }
   }
 ]
-
 const dominant7s9 = [
   {
     name: '6弦ルート',
@@ -1124,6 +1001,10 @@ export const allChords = [
   {
     name: 'Cm7(b5) / Cø',
     chords: m7b5
+  },
+  {
+    name: 'Cm(maj7) / CmMaj7',
+    chords: mmaj7
   },
   {
     name: 'C6',
