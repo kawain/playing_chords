@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
-import { initFretboardSvg, showFretMark } from './etc/fretboard.js'
-import Volume from './Volume'
+import abcjs from 'abcjs'
+import { initFretboardSvg, showFretMark, hideFretMark } from './etc/fretboard.js'
 import { playNote } from './etc/sound'
+import Volume from './Volume'
 
+// ギターの音域を定義 (E2からD6まで)
 const guitarRange = [
   'E2',
   'F2',
@@ -52,11 +54,13 @@ const guitarRange = [
   'C#6',
   'D6'
 ]
+// 開放弦の音
 const openStringNotes = { 1: 'E4', 2: 'B3', 3: 'G3', 4: 'D3', 5: 'A2', 6: 'E2' }
 
 const FRET_COUNT_ON_SVG = 22
 const guitarStrings = []
 
+// 各弦の各フレットに対応する音名を格納した二次元配列を生成
 for (let stringNum = 1; stringNum <= 6; stringNum++) {
   const openNote = openStringNotes[stringNum]
   const startIndex = guitarRange.indexOf(openNote)
@@ -67,101 +71,114 @@ for (let stringNum = 1; stringNum <= 6; stringNum++) {
   }
 }
 
-const notesToPractice = [...new Set(guitarStrings.flat())]
+/**
+ * 科学的ピッチ表記を1オクターブ高くしてabcjsの音名表記に変換します。
+ * @param {string} noteName - 科学的ピッチ表記の音名。
+ * @returns {string} abcjs の音名表記。
+ */
+const scientificToAbcNotation = noteName => {
+  if (!noteName) return ''
+  const match = noteName.match(/([A-G])([b#]?)([0-9])/)
+  if (!match) return ''
+
+  let [, note, accidental, octaveStr] = match
+  const octave = parseInt(octaveStr, 10) + 1
+
+  if (accidental === '#') {
+    note = `^${note}`
+  } else if (accidental === 'b') {
+    note = `_${note}`
+  }
+
+  if (octave === 4) {
+    return note
+  } else if (octave > 4) {
+    return note.toLowerCase() + "'".repeat(octave - 5)
+  } else {
+    return note + ','.repeat(4 - octave)
+  }
+}
 
 function FingerboardNotes () {
-  const [isRunning, setIsRunning] = useState(false)
-  const [currentNote, setCurrentNote] = useState(null)
-  const [showAnswer, setShowAnswer] = useState(false)
-
   const fretboardRef = useRef(null)
-  const timerRef = useRef(null)
-  const stepRef = useRef(0)
-
-  const intervalTime = 5000
-
-  const resetFretboard = () => {
-    if (fretboardRef.current) {
-      initFretboardSvg(fretboardRef.current)
-    }
-    setCurrentNote(null)
-    setShowAnswer(false)
-  }
+  const notationRef = useRef(null)
+  const lastClickedPositionRef = useRef(null)
+  // クリックされた音名を保持するための state
+  const [currentNote, setCurrentNote] = useState(null)
 
   useEffect(() => {
-    resetFretboard()
-  }, [])
+    const svgElement = fretboardRef.current
+    if (!svgElement) return
 
-  const findNotePositions = note => {
-    const positions = []
-    for (let stringIndex = 0; stringIndex < guitarStrings.length; stringIndex++) {
-      const fretIndex = guitarStrings[stringIndex].indexOf(note)
-      if (fretIndex !== -1) {
-        positions.push({ stringIndex, fretboardCxIndex: fretIndex })
+    initFretboardSvg(svgElement)
+    const fretGroups = svgElement.querySelectorAll('.fret-position-group')
+
+    const handleFretClick = event => {
+      if (lastClickedPositionRef.current) {
+        const { stringIndex, fretboardCxIndex } = lastClickedPositionRef.current
+        hideFretMark(stringIndex, fretboardCxIndex, svgElement)
       }
-    }
-    return positions
-  }
 
-  const runTrainingStep = () => {
-    if (stepRef.current === 0) {
-      resetFretboard()
-      const randomNote = notesToPractice[Math.floor(Math.random() * notesToPractice.length)]
-      setCurrentNote(randomNote)
+      const group = event.currentTarget
+      const stringIndex = parseInt(group.dataset.stringIndex, 10)
+      const fretboardCxIndex = parseInt(group.dataset.fretboardCxIndex, 10)
+      const scientificNote = guitarStrings[stringIndex][fretboardCxIndex]
 
-      const positions = findNotePositions(randomNote)
-      if (positions.length > 0) {
-        for (const position of positions) {
-          showFretMark(
-            position.stringIndex,
-            position.fretboardCxIndex,
-            '',
-            'red',
-            'white',
-            fretboardRef.current
-          )
+      if (scientificNote) {
+        // --- 1. クリックされた音名を state にセット ---
+        setCurrentNote(scientificNote)
+
+        // --- 2. ギターの音を鳴らす ---
+        playNote('guitar', scientificNote)
+
+        // --- 3. 新しい位置に赤丸を表示（テキストは空にする） ---
+        showFretMark(stringIndex, fretboardCxIndex, '', 'red', 'white', svgElement)
+
+        // --- 4. 楽譜を表示する ---
+        const abcNote = scientificToAbcNotation(scientificNote)
+        if (abcNote) {
+          const abcString = `L: 4/4\n${abcNote}`
+          abcjs.renderAbc(notationRef.current, abcString, {
+            responsive: 'resize',
+            staffwidth: 100
+          })
         }
-        playNote('guitar', randomNote)
+
+        lastClickedPositionRef.current = { stringIndex, fretboardCxIndex }
       }
-      stepRef.current = 1
-    } else {
-      setShowAnswer(true)
-      stepRef.current = 0
     }
-  }
 
-  const handleStartStopClick = () => {
-    if (isRunning) {
-      clearInterval(timerRef.current)
-      timerRef.current = null
-    } else {
-      runTrainingStep()
-      timerRef.current = setInterval(runTrainingStep, intervalTime)
-    }
-    setIsRunning(!isRunning)
-  }
+    fretGroups.forEach(group => {
+      group.addEventListener('click', handleFretClick)
+    })
 
-  useEffect(() => {
     return () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current)
-      }
+      fretGroups.forEach(group => {
+        group.removeEventListener('click', handleFretClick)
+      })
     }
   }, [])
 
   return (
     <>
       <h2>指板の音を覚える</h2>
-      <div className='FingerboardNotes-controls'>
-        <button onClick={handleStartStopClick}>{isRunning ? '停止' : '開始'}</button>
-      </div>
-      <svg ref={fretboardRef} id='fretboard_svg' viewBox='0 0 810 170'></svg>
+      <p className='center' style={{ margin: '20px 0' }}>
+        指板上の任意のフレットをクリックすると、その音を再生し、楽譜を表示します。
+      </p>
 
-      {showAnswer && (
-        <p className='FingerboardNotes-answer'>
-          答えは <span>{currentNote}</span> です
-        </p>
-      )}
+      <svg
+        ref={fretboardRef}
+        id='fretboard_svg'
+        viewBox='0 0 810 170'
+        style={{ cursor: 'pointer' }}
+      ></svg>
+
+      <div className='FingerboardNotes-result'>
+        <div ref={notationRef} className='abcjs-notation-output'></div>
+        <div className='note-display-area'>
+          {currentNote && <p style={{ fontSize: '5rem' }}>{currentNote}</p>}
+        </div>
+      </div>
 
       <div className='controls-panel'>
         <Volume />

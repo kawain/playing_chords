@@ -396,20 +396,11 @@ nav select {
 }
 
 /* FingerboardNotes */
-.FingerboardNotes-controls {
-  text-align: center;
-
-  button {
-    margin: 20px 0;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-}
-
-.FingerboardNotes-answer {
-  text-align: center;
-  span {
-    font-weight: bold;
-    font-size: 5rem;
-  }
+.FingerboardNotes-result {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

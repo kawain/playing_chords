@@ -77,7 +77,7 @@ function App () {
             <option value='FingerboardNotes'>指板の音を覚える</option>
             <option value='Chord'>コードポジション</option>
             <option value='Scale'>コードトーンとスケール</option>
-            <option value='Phrase'>フレーズ</option>
+            {/* <option value='Phrase'>フレーズ</option> */}
             <option value='ChordPlaying'>ランダムコード演奏</option>
             <option value='Accompaniment'>コード入力演奏</option>
           </select>
