@@ -54,11 +54,7 @@ function parseChordProgression (jsonText) {
         throw new Error(`Chords must be an array in measure ${index + 1}`)
       }
 
-      return new Measure(
-        measureData.numerator,
-        measureData.denominator,
-        measureData.chords
-      )
+      return new Measure(measureData.numerator, measureData.denominator, measureData.chords)
     })
 
     // ChordProgressionオブジェクトを作成
@@ -249,13 +245,7 @@ function createCymbalTrack (progression, beatDuration) {
       notes.push(new Note(currentTime, beatDuration, null))
       // 最後の拍 (numeratorが1より大きい場合のみ)
       if (numerator > 1) {
-        notes.push(
-          new Note(
-            currentTime + (numerator - 1) * beatDuration,
-            beatDuration,
-            null
-          )
-        )
+        notes.push(new Note(currentTime + (numerator - 1) * beatDuration, beatDuration, null))
       }
     }
 
@@ -281,9 +271,7 @@ function createPianoTrack (progression, beatDuration) {
         if (rawNotes) {
           const pitches = assignOctavesToChordNotes(rawNotes, 3)
           pitches.forEach(pitch =>
-            notes.push(
-              new Note(currentTime + i * beatDuration, beatDuration, pitch)
-            )
+            notes.push(new Note(currentTime + i * beatDuration, beatDuration, pitch))
           )
         }
       }
@@ -309,16 +297,18 @@ function getNoteIndex (noteWithOctave) {
  * @returns {string} 最も近いオクターブ付きの音名 (例: "C3")
  */
 function findClosestNote (lastNoteWithOctave, targetNoteName) {
-  // 曲の最初の音の場合、E1-Eb2の範囲で適切なオクターブを探す
+  // 曲の最初の音の場合、E2-E3の範囲で適切なオクターブを探す
   if (!lastNoteWithOctave) {
-    for (let octave = 1; octave <= 2; octave++) {
+    // E3に近いオクターブから試す
+    for (const octave of [3, 2]) {
       const note = `${targetNoteName}${octave}`
       const index = getNoteIndex(note)
-      if (index >= getNoteIndex('E1') && index <= getNoteIndex('D#2')) {
+      if (index !== -1 && index >= getNoteIndex('E2') && index <= getNoteIndex('E3')) {
         return note
       }
     }
-    return `${targetNoteName}1` // デフォルトフォールバック
+    // 範囲内に見つからなければ、オクターブ2を付けて返し、後の音域補正に任せる
+    return `${targetNoteName}2`
   }
 
   const lastNoteIndex = getNoteIndex(lastNoteWithOctave)
@@ -340,15 +330,15 @@ function findClosestNote (lastNoteWithOctave, targetNoteName) {
 }
 
 /**
- * ベースの音域（Eb1 〜 E3）を逸脱しないように音を補正する
- * - Eb1 を下回る場合は、下回らなくなるまで1オクターブ上げる
- * - F3 を上回る場合は、上回らなくなるまで1オクターブ下げる
- * @param {string} noteWithOctave 補正する音名 (例: "G3")
- * @returns {string} 補正後の音名 (例: "G2")
+ * ベースの音域（E2 〜 E3）を逸脱しないように音を補正する
+ * - E2 を下回る場合は、下回らなくなるまで1オクターブ上げる
+ * - E3 を上回る場合は、上回らなくなるまで1オクターブ下げる
+ * @param {string} noteWithOctave 補正する音名 (例: "F3")
+ * @returns {string} 補正後の音名 (例: "F2")
  */
 function enforceBassPitchRange (noteWithOctave) {
-  const minPitchIndex = getNoteIndex('D#1') // Eb1
-  const maxPitchIndex = getNoteIndex('F3')
+  const minPitchIndex = getNoteIndex('E2')
+  const maxPitchIndex = getNoteIndex('E3')
   let noteIndex = getNoteIndex(noteWithOctave)
 
   // 最低音より低い場合、オクターブを上げる
@@ -357,43 +347,11 @@ function enforceBassPitchRange (noteWithOctave) {
   }
 
   // 最高音より高い場合、オクターブを下げる
-  while (noteIndex >= maxPitchIndex) {
+  while (noteIndex > maxPitchIndex) {
     noteIndex -= 12
   }
 
   return Range[noteIndex]
-}
-
-/**
- * アプローチノートの音名（オクターブなし）を決定する
- */
-function getApproachNoteName (
-  lastNoteOfPattern,
-  nextChordRootName,
-  currentChordFifth
-) {
-  const lastNoteIndex = getNoteIndex(lastNoteOfPattern)
-
-  // 半音上の音を探す
-  const sharpNoteIndex = lastNoteIndex + 1
-  if (
-    sharpNoteIndex < Range.length &&
-    Range[sharpNoteIndex].slice(0, -1) === nextChordRootName
-  ) {
-    return Range[sharpNoteIndex].slice(0, -1)
-  }
-
-  // 半音下の音を探す
-  const flatNoteIndex = lastNoteIndex - 1
-  if (
-    flatNoteIndex >= 0 &&
-    Range[flatNoteIndex].slice(0, -1) === nextChordRootName
-  ) {
-    return Range[flatNoteIndex].slice(0, -1)
-  }
-
-  // クロマチック・アプローチできない場合は5thを返す
-  return currentChordFifth
 }
 
 /**
@@ -410,20 +368,25 @@ function createBassTrack (progression, beatDuration) {
 
   // 1. コード進行をフラット化（コードと持続拍数のリストに変換）
   const flatChordList = []
-  let currentChordName = progression.measures[0]?.chords[0] || null
-  let durationCount = 0
   const allChords = progression.measures.flatMap(m => m.chords)
 
+  const initialChord = allChords.find(c => c && c.length > 0)
+  if (!initialChord) {
+    return new Track('bass', bassNotes)
+  }
+
+  let currentChordName = initialChord
+  let durationCount = 0
   for (const chord of allChords) {
-    const name = chord || currentChordName
-    if (name !== currentChordName && currentChordName !== null) {
+    const name = chord && chord.length > 0 ? chord : currentChordName
+    if (name !== currentChordName) {
       flatChordList.push({ name: currentChordName, duration: durationCount })
       durationCount = 0
+      currentChordName = name
     }
-    currentChordName = name
     durationCount++
   }
-  if (currentChordName) {
+  if (durationCount > 0) {
     flatChordList.push({ name: currentChordName, duration: durationCount })
   }
 
@@ -431,74 +394,60 @@ function createBassTrack (progression, beatDuration) {
   let currentTime = 0
   let lastPlayedNote = null
 
-  for (let i = 0; i < flatChordList.length; i++) {
-    const item = flatChordList[i]
+  for (const item of flatChordList) {
     const N = item.duration
-
     const parsedNotes = parseChord(item.name)
-    if (!parsedNotes) continue
+
+    if (!parsedNotes || parsedNotes.length === 0) continue
 
     const rootName = parsedNotes[0]
     const thirdName = parsedNotes.length > 1 ? parsedNotes[1] : rootName
     const fifthName = parsedNotes.length > 2 ? parsedNotes[2] : rootName
 
+    // ランダムに選択する候補の音（ルート、3度、5度）を配列にまとめる
+    const chordTones = [rootName, thirdName, fifthName]
+    // 上記の配列からランダムに1つの音名を取得するヘルパー関数
+    const getRandomChordTone = () => chordTones[Math.floor(Math.random() * chordTones.length)]
+
     let noteNamesToPlay = []
 
-    // アプローチノートを決定
-    let approachNoteName = fifthName // デフォルト
-    const nextChord = flatChordList[i + 1]
-    if (nextChord) {
-      const nextParsed = parseChord(nextChord.name)
-      if (nextParsed) {
-        const tempLastNote = findClosestNote(lastPlayedNote || 'A2', fifthName) // 仮の最終音で計算
-        approachNoteName = getApproachNoteName(
-          tempLastNote,
-          nextParsed[0],
-          fifthName
-        )
-      }
-    }
-
-    // Nに応じたパターンを生成
-    if (N === 1) noteNamesToPlay.push(rootName)
-    else if (N === 2) noteNamesToPlay.push(rootName, approachNoteName)
-    else if (N === 3)
-      noteNamesToPlay.push(rootName, thirdName, approachNoteName)
-    else if (N === 4)
-      noteNamesToPlay.push(rootName, thirdName, fifthName, approachNoteName)
-    else if (N === 5)
-      noteNamesToPlay.push(
+    // N（同じコードが続く拍数）に応じたパターンを生成
+    if (N === 1) {
+      // 1拍目: ルート音で固定
+      noteNamesToPlay = [rootName]
+    } else if (N === 2) {
+      // 1拍目: ルート音, 2拍目: ランダム
+      noteNamesToPlay = [rootName, getRandomChordTone()]
+    } else if (N === 3) {
+      // 1拍目: ルート音, 2,3拍目: ランダム
+      noteNamesToPlay = [rootName, getRandomChordTone(), getRandomChordTone()]
+    } else if (N === 4) {
+      // 1拍目: ルート音, 2,3,4拍目: ランダム
+      noteNamesToPlay = [rootName, getRandomChordTone(), getRandomChordTone(), getRandomChordTone()]
+    } else if (N === 8) {
+      // 1,5拍目: ルート音, その他: ランダム
+      noteNamesToPlay = [
         rootName,
-        thirdName,
-        fifthName,
-        fifthName,
-        approachNoteName
-      )
-    else {
-      // N >= 6
+        getRandomChordTone(),
+        getRandomChordTone(),
+        getRandomChordTone(),
+        rootName,
+        getRandomChordTone(),
+        getRandomChordTone(),
+        getRandomChordTone()
+      ]
+    } else {
+      // Nが5以上で8以外の場合
+      // 1拍目: ルート音, 残り: ランダム
       noteNamesToPlay.push(rootName)
-      const pattern = [rootName, thirdName, fifthName, fifthName]
-      for (let j = 0; j < N - 2; j++) {
-        noteNamesToPlay.push(pattern[j % 4])
+      for (let i = 1; i < N; i++) {
+        noteNamesToPlay.push(getRandomChordTone())
       }
-      noteNamesToPlay.push(approachNoteName)
     }
 
     // 3. 音名リストにオクターブを割り当て、Noteオブジェクトを生成
-    for (let k = 0; k < noteNamesToPlay.length; k++) {
-      const noteName = noteNamesToPlay[k]
+    for (const noteName of noteNamesToPlay) {
       let noteWithOctave = findClosestNote(lastPlayedNote, noteName)
-
-      const isLowerFifthPattern =
-        (N === 5 && k === 3) ||
-        (N >= 6 && k > 0 && k < N - 1 && (k - 1) % 4 === 3)
-      if (noteName === fifthName && isLowerFifthPattern) {
-        const currentIndex = getNoteIndex(noteWithOctave)
-        if (currentIndex >= 12) {
-          noteWithOctave = Range[currentIndex - 12]
-        }
-      }
-
       noteWithOctave = enforceBassPitchRange(noteWithOctave)
 
       bassNotes.push(new Note(currentTime, beatDuration, noteWithOctave))
@@ -540,12 +489,7 @@ export function createPlayableSequence (progression) {
     mainLoopDuration += measureDuration
   })
 
-  const mainLoopData = new MusicData(
-    tempo,
-    mainLoopDuration,
-    mainLoopTracks,
-    measureTimings
-  )
+  const mainLoopData = new MusicData(tempo, mainLoopDuration, mainLoopTracks, measureTimings)
 
   return new PlayableSequence(mainLoopData, countInData)
 }
