@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import HowToRead from './HowToRead'
 import Tuning from './Tuning'
 import Metronome from './Metronome'
 import FingerboardNotes from './FingerboardNotes'
@@ -44,6 +45,8 @@ function App () {
   // 表示するコンテンツを決定する関数
   const renderContent = () => {
     switch (currentContent) {
+      case 'HowToRead':
+        return <HowToRead />
       case 'Tuning':
         return <Tuning />
       case 'Metronome':
@@ -59,7 +62,9 @@ function App () {
       case 'ChordPlaying':
         return <ChordPlaying tempo={tempo} handleTempoChange={handleTempoChange} />
       case 'Accompaniment':
-        return <Accompaniment tempo={tempo} setTempo={setTempo} handleTempoChange={handleTempoChange} />
+        return (
+          <Accompaniment tempo={tempo} setTempo={setTempo} handleTempoChange={handleTempoChange} />
+        )
       default:
         return ''
     }
@@ -72,6 +77,7 @@ function App () {
         <nav>
           <select value={currentContent} onChange={e => setCurrentContent(e.target.value)}>
             <option value=''>コンテンツを選択してください</option>
+            <option value='HowToRead'>楽譜の読み方</option>
             <option value='Tuning'>チューニング</option>
             <option value='Metronome'>メトロノーム</option>
             <option value='FingerboardNotes'>指板の音を覚える</option>

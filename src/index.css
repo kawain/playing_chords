@@ -404,3 +404,52 @@ nav select {
   align-items: center;
   gap: 20px;
 }
+
+/* HowToRead */
+.how-to-read {
+  line-height: 1.5;
+
+  p {
+    padding: 10px;
+  }
+  h4 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  h5 {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+
+  li {
+    margin-left: 30px;
+  }
+  table {
+    margin: 20px 0;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: #ccc 1px solid;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .abcjs-area {
+    background-color: #ccc;
+    max-width: 1000px;
+    margin: 50px auto;
+  }
+
+  .spell {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .spell td {
+    font-size: 1.5rem;
+  }
+}
