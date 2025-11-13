@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import HowToRead from './HowToRead'
 import MusicTheory from './MusicTheory'
+import MusicTheory2 from './MusicTheory2'
+import MusicTheory3 from './MusicTheory3'
 import Tuning from './Tuning'
 import Metronome from './Metronome'
 import FingerboardNotes from './FingerboardNotes'
@@ -50,6 +52,10 @@ function App () {
         return <HowToRead />
       case 'MusicTheory':
         return <MusicTheory />
+      case 'MusicTheory2':
+        return <MusicTheory2 />
+      case 'MusicTheory3':
+        return <MusicTheory3 />
       case 'Tuning':
         return <Tuning />
       case 'Metronome':
@@ -82,14 +88,16 @@ function App () {
             <option value=''>コンテンツを選択してください</option>
             <option value='HowToRead'>楽譜の読み方</option>
             <option value='MusicTheory'>簡単な音楽理論</option>
-            <option value='Tuning'>チューニング</option>
-            <option value='Metronome'>メトロノーム</option>
+            <option value='MusicTheory2'>マイナー・スケールの話</option>
+            <option value='MusicTheory3'>複雑なコードの仕組み</option>
             <option value='FingerboardNotes'>指板の音を覚える</option>
             <option value='Chord'>コードポジション</option>
             <option value='Scale'>コードトーンとスケール</option>
             {/* <option value='Phrase'>フレーズ</option> */}
-            <option value='ChordPlaying'>ランダムコード演奏</option>
+            <option value='ChordPlaying'>五度圏コード進行</option>
             <option value='Accompaniment'>コード入力演奏</option>
+            <option value='Tuning'>チューニング</option>
+            <option value='Metronome'>メトロノーム</option>
           </select>
         </nav>
         <main>{renderContent()}</main>

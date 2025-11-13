@@ -113,7 +113,7 @@ function ChordPlaying ({ tempo, handleTempoChange }) {
 
   return (
     <>
-      <h1>ランダムコード演奏</h1>
+      <h1>ランダム五度圏コード進行演奏</h1>
 
       <div className='create-pattern'>
         <select value={selectedChordKind} onChange={handleChordKindChange}>

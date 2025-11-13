@@ -27,6 +27,11 @@ function Home () {
         ))}
       </div>
 
+      <h3>ドロップDチューニング</h3>
+      <div className='tuning'>
+        <button onClick={() => playNote('piano', 'D2')}>D2</button>
+      </div>
+
       <div className='controls-panel'>
         <Volume />
       </div>
