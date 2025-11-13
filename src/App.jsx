@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import HowToRead from './HowToRead'
+import MusicTheory from './MusicTheory'
 import Tuning from './Tuning'
 import Metronome from './Metronome'
 import FingerboardNotes from './FingerboardNotes'
@@ -47,6 +48,8 @@ function App () {
     switch (currentContent) {
       case 'HowToRead':
         return <HowToRead />
+      case 'MusicTheory':
+        return <MusicTheory />
       case 'Tuning':
         return <Tuning />
       case 'Metronome':
@@ -78,6 +81,7 @@ function App () {
           <select value={currentContent} onChange={e => setCurrentContent(e.target.value)}>
             <option value=''>コンテンツを選択してください</option>
             <option value='HowToRead'>楽譜の読み方</option>
+            <option value='MusicTheory'>簡単な音楽理論</option>
             <option value='Tuning'>チューニング</option>
             <option value='Metronome'>メトロノーム</option>
             <option value='FingerboardNotes'>指板の音を覚える</option>
