@@ -1,0 +1,7624 @@
+[
+    {
+        "question": "ギターの1弦、1フレットの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、2フレットの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、3フレットの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、4フレットの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、5フレットの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、6フレットの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、7フレットの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、8フレットの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、9フレットの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、10フレットの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、11フレットの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの1弦、12フレットの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、1フレットの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、2フレットの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、3フレットの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、4フレットの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、5フレットの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、6フレットの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、7フレットの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、8フレットの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、9フレットの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、10フレットの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、11フレットの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの2弦、12フレットの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、1フレットの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、2フレットの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、3フレットの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、4フレットの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、5フレットの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、6フレットの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、7フレットの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、8フレットの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、9フレットの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、10フレットの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、11フレットの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの3弦、12フレットの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、1フレットの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、2フレットの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、3フレットの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、4フレットの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、5フレットの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、6フレットの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、7フレットの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、8フレットの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、9フレットの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、10フレットの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、11フレットの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの4弦、12フレットの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、1フレットの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、2フレットの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、3フレットの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、4フレットの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、5フレットの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、6フレットの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、7フレットの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、8フレットの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、9フレットの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、10フレットの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、11フレットの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの5弦、12フレットの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、1フレットの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、2フレットの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、3フレットの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、4フレットの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、5フレットの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、6フレットの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、7フレットの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、8フレットの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、9フレットの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、10フレットの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、11フレットの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ギターの6弦、12フレットの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cmaj7コードの3rdの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cmaj7コードの5thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cmaj7コードの7thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cm7コードの3rdの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cm7コードの5thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cm7コードの7thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C7コードの3rdの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C7コードの5thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C7コードの7thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cm7b5コードの3rdの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cm7b5コードの5thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cm7b5コードの7thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#maj7コードの3rdの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#maj7コードの5thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#maj7コードの7thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#m7コードの3rdの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#m7コードの5thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#m7コードの7thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#7コードの3rdの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#7コードの5thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#7コードの7thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#m7b5コードの3rdの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#m7b5コードの5thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "C#m7b5コードの7thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dmaj7コードの3rdの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dmaj7コードの5thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dmaj7コードの7thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dm7コードの3rdの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dm7コードの5thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dm7コードの7thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "D7コードの3rdの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "D7コードの5thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "D7コードの7thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dm7b5コードの3rdの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dm7b5コードの5thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Dm7b5コードの7thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebmaj7コードの3rdの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebmaj7コードの5thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebmaj7コードの7thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebm7コードの3rdの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebm7コードの5thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebm7コードの7thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Eb7コードの3rdの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Eb7コードの5thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Eb7コードの7thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebm7b5コードの3rdの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebm7b5コードの5thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ebm7b5コードの7thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Emaj7コードの3rdの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Emaj7コードの5thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Emaj7コードの7thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Em7コードの3rdの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Em7コードの5thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Em7コードの7thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "E7コードの3rdの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "E7コードの5thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "E7コードの7thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Em7b5コードの3rdの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Em7b5コードの5thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Em7b5コードの7thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fmaj7コードの3rdの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fmaj7コードの5thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fmaj7コードの7thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fm7コードの3rdの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fm7コードの5thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fm7コードの7thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F7コードの3rdの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F7コードの5thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F7コードの7thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fm7b5コードの3rdの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fm7b5コードの5thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Fm7b5コードの7thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#maj7コードの3rdの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#maj7コードの5thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#maj7コードの7thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#m7コードの3rdの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#m7コードの5thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#m7コードの7thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#7コードの3rdの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#7コードの5thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#7コードの7thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#m7b5コードの3rdの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#m7b5コードの5thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "F#m7b5コードの7thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gmaj7コードの3rdの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gmaj7コードの5thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gmaj7コードの7thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gm7コードの3rdの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gm7コードの5thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gm7コードの7thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "G7コードの3rdの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "G7コードの5thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "G7コードの7thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gm7b5コードの3rdの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gm7b5コードの5thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Gm7b5コードの7thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abmaj7コードの3rdの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abmaj7コードの5thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abmaj7コードの7thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abm7コードの3rdの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abm7コードの5thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abm7コードの7thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ab7コードの3rdの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ab7コードの5thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Ab7コードの7thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abm7b5コードの3rdの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abm7b5コードの5thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Abm7b5コードの7thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Amaj7コードの3rdの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Amaj7コードの5thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Amaj7コードの7thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Am7コードの3rdの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Am7コードの5thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Am7コードの7thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "A7コードの3rdの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "A7コードの5thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "A7コードの7thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Am7b5コードの3rdの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Am7b5コードの5thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Am7b5コードの7thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbmaj7コードの3rdの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbmaj7コードの5thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbmaj7コードの7thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbm7コードの3rdの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbm7コードの5thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbm7コードの7thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bb7コードの3rdの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bb7コードの5thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bb7コードの7thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbm7b5コードの3rdの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbm7b5コードの5thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bbm7b5コードの7thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bmaj7コードの3rdの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bmaj7コードの5thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bmaj7コードの7thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bm7コードの3rdの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bm7コードの5thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bm7コードの7thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "B7コードの3rdの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "B7コードの5thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "B7コードの7thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bm7b5コードの3rdの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bm7b5コードの5thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Bm7b5コードの7thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "Cキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Dm7",
+        "choices": [
+            "C7",
+            "Emaj7",
+            "Fm7",
+            "F#m7b5",
+            "Am7b5",
+            "Ebm7b5",
+            "Dmaj7",
+            "F#7",
+            "Gm7",
+            "Dm7",
+            "C#maj7",
+            "F7"
+        ]
+    },
+    {
+        "question": "Cキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Em7",
+        "choices": [
+            "G7",
+            "B7",
+            "Fm7b5",
+            "Em7",
+            "Abm7b5",
+            "Am7",
+            "Bbmaj7",
+            "Eb7",
+            "Bb7",
+            "Cm7",
+            "C7",
+            "Abm7"
+        ]
+    },
+    {
+        "question": "Cキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Fmaj7",
+        "choices": [
+            "Abmaj7",
+            "Bbmaj7",
+            "B7",
+            "Gm7b5",
+            "Ebmaj7",
+            "F#maj7",
+            "Dm7b5",
+            "Em7",
+            "Fmaj7",
+            "Am7",
+            "Bm7",
+            "C#m7b5"
+        ]
+    },
+    {
+        "question": "Cキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "G7",
+        "choices": [
+            "Bbmaj7",
+            "Bm7b5",
+            "Cm7b5",
+            "Dm7",
+            "Dmaj7",
+            "G7",
+            "F#maj7",
+            "Ebm7",
+            "C7",
+            "Am7b5",
+            "F#7",
+            "Em7b5"
+        ]
+    },
+    {
+        "question": "Cキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Am7",
+        "choices": [
+            "E7",
+            "Bb7",
+            "F#m7",
+            "B7",
+            "Gm7",
+            "D7",
+            "C#m7b5",
+            "Abmaj7",
+            "Am7",
+            "A7",
+            "F#m7b5",
+            "Fmaj7"
+        ]
+    },
+    {
+        "question": "Cキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Bm7b5",
+        "choices": [
+            "Gm7",
+            "Fmaj7",
+            "Ab7",
+            "Abm7b5",
+            "Em7b5",
+            "Cm7",
+            "Fm7",
+            "Cm7b5",
+            "Dm7b5",
+            "Ebm7",
+            "Bm7b5",
+            "Em7"
+        ]
+    },
+    {
+        "question": "C#キーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Ebm7",
+        "choices": [
+            "Ab7",
+            "Em7b5",
+            "F#maj7",
+            "Dm7",
+            "F7",
+            "Cmaj7",
+            "E7",
+            "Ebmaj7",
+            "Fm7",
+            "Bm7b5",
+            "Ebm7",
+            "Cm7b5"
+        ]
+    },
+    {
+        "question": "C#キーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Fm7",
+        "choices": [
+            "E7",
+            "Em7b5",
+            "Fm7",
+            "Abmaj7",
+            "Bbmaj7",
+            "Ebm7b5",
+            "Cm7",
+            "Gm7b5",
+            "Dmaj7",
+            "Amaj7",
+            "Ab7",
+            "F#7"
+        ]
+    },
+    {
+        "question": "C#キーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "F#maj7",
+        "choices": [
+            "Bbm7",
+            "F#m7",
+            "Dmaj7",
+            "Cm7",
+            "F7",
+            "Fm7",
+            "F#maj7",
+            "Emaj7",
+            "Gm7",
+            "Bmaj7",
+            "Eb7",
+            "C#m7b5"
+        ]
+    },
+    {
+        "question": "C#キーでダイアトニックコード（四和音）のVは何？",
+        "correct": "Ab7",
+        "choices": [
+            "Cm7b5",
+            "D7",
+            "C#maj7",
+            "Bb7",
+            "Abm7b5",
+            "Gm7b5",
+            "Bmaj7",
+            "F#maj7",
+            "Ab7",
+            "Abm7",
+            "Gmaj7",
+            "Eb7"
+        ]
+    },
+    {
+        "question": "C#キーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Bbm7",
+        "choices": [
+            "Cm7",
+            "Em7b5",
+            "C#7",
+            "Fm7b5",
+            "F#7",
+            "Dm7b5",
+            "A7",
+            "Cmaj7",
+            "Ab7",
+            "Cm7b5",
+            "Bbm7",
+            "Ebm7"
+        ]
+    },
+    {
+        "question": "C#キーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Cm7b5",
+        "choices": [
+            "G7",
+            "Am7b5",
+            "Dm7",
+            "Am7",
+            "Bm7",
+            "B7",
+            "Cm7b5",
+            "Em7",
+            "F#m7b5",
+            "Ebm7",
+            "Dmaj7",
+            "Gm7"
+        ]
+    },
+    {
+        "question": "Dキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Em7",
+        "choices": [
+            "Gmaj7",
+            "Bm7",
+            "Fm7b5",
+            "Fmaj7",
+            "F#maj7",
+            "F7",
+            "E7",
+            "Am7b5",
+            "C#maj7",
+            "Em7",
+            "Bbmaj7",
+            "F#m7b5"
+        ]
+    },
+    {
+        "question": "Dキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "F#m7",
+        "choices": [
+            "Cmaj7",
+            "F#7",
+            "A7",
+            "C#m7",
+            "Abm7",
+            "Dmaj7",
+            "F#m7",
+            "Ebmaj7",
+            "Gm7b5",
+            "F#m7b5",
+            "B7",
+            "Bb7"
+        ]
+    },
+    {
+        "question": "Dキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Gmaj7",
+        "choices": [
+            "Dm7b5",
+            "Cmaj7",
+            "F7",
+            "Abm7b5",
+            "Fm7b5",
+            "Bm7",
+            "F#m7",
+            "Ebmaj7",
+            "Cm7b5",
+            "Gmaj7",
+            "Ebm7",
+            "Bmaj7"
+        ]
+    },
+    {
+        "question": "Dキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "A7",
+        "choices": [
+            "F#m7",
+            "Bbm7b5",
+            "Dm7",
+            "Bbm7",
+            "D7",
+            "Bm7",
+            "Amaj7",
+            "A7",
+            "Gm7b5",
+            "Eb7",
+            "Abmaj7",
+            "Bb7"
+        ]
+    },
+    {
+        "question": "Dキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Bm7",
+        "choices": [
+            "Dm7b5",
+            "Am7b5",
+            "Bmaj7",
+            "C#maj7",
+            "Fmaj7",
+            "Eb7",
+            "Dm7",
+            "Em7",
+            "C7",
+            "Amaj7",
+            "Bm7",
+            "G7"
+        ]
+    },
+    {
+        "question": "Dキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "C#m7b5",
+        "choices": [
+            "Dmaj7",
+            "F#m7b5",
+            "Gmaj7",
+            "Ebm7b5",
+            "Am7b5",
+            "Bbm7b5",
+            "Cmaj7",
+            "Bm7",
+            "F#7",
+            "F#m7",
+            "C#m7b5",
+            "Em7b5"
+        ]
+    },
+    {
+        "question": "Ebキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Fm7",
+        "choices": [
+            "Emaj7",
+            "Abm7",
+            "C#7",
+            "Gm7b5",
+            "Ebmaj7",
+            "Cmaj7",
+            "Ebm7b5",
+            "Fm7",
+            "C#m7",
+            "G7",
+            "Gm7",
+            "D7"
+        ]
+    },
+    {
+        "question": "Ebキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Gm7",
+        "choices": [
+            "C7",
+            "B7",
+            "Dmaj7",
+            "Cm7",
+            "Bbmaj7",
+            "Dm7b5",
+            "Dm7",
+            "G7",
+            "C#m7b5",
+            "F#7",
+            "Gm7",
+            "Am7"
+        ]
+    },
+    {
+        "question": "Ebキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Abmaj7",
+        "choices": [
+            "Emaj7",
+            "Abmaj7",
+            "D7",
+            "B7",
+            "F#m7b5",
+            "Cm7b5",
+            "Dm7b5",
+            "Ab7",
+            "Gm7",
+            "Fm7",
+            "Gm7b5",
+            "F#maj7"
+        ]
+    },
+    {
+        "question": "Ebキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "Bb7",
+        "choices": [
+            "Fmaj7",
+            "Ebmaj7",
+            "E7",
+            "Amaj7",
+            "Cm7",
+            "Emaj7",
+            "C#m7",
+            "Cmaj7",
+            "Bb7",
+            "B7",
+            "Am7b5",
+            "Gmaj7"
+        ]
+    },
+    {
+        "question": "Ebキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Cm7",
+        "choices": [
+            "G7",
+            "Am7",
+            "Bm7",
+            "Cm7",
+            "Fmaj7",
+            "Eb7",
+            "B7",
+            "Dmaj7",
+            "Cmaj7",
+            "Ab7",
+            "C7",
+            "Dm7b5"
+        ]
+    },
+    {
+        "question": "Ebキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Dm7b5",
+        "choices": [
+            "Fmaj7",
+            "F#m7",
+            "Bbm7",
+            "Fm7",
+            "Dm7b5",
+            "C#m7",
+            "Am7",
+            "D7",
+            "Abm7b5",
+            "C#7",
+            "Em7b5",
+            "Abm7"
+        ]
+    },
+    {
+        "question": "Eキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "F#m7",
+        "choices": [
+            "Eb7",
+            "Fmaj7",
+            "Fm7b5",
+            "Ebmaj7",
+            "F#m7",
+            "Bmaj7",
+            "Bm7b5",
+            "D7",
+            "F7",
+            "Am7",
+            "Bbm7",
+            "Gm7"
+        ]
+    },
+    {
+        "question": "Eキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Abm7",
+        "choices": [
+            "Abm7",
+            "Gmaj7",
+            "F#7",
+            "Dm7",
+            "C#m7b5",
+            "Emaj7",
+            "Abm7b5",
+            "Bbm7b5",
+            "Ab7",
+            "B7",
+            "Ebm7b5",
+            "C#7"
+        ]
+    },
+    {
+        "question": "Eキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Amaj7",
+        "choices": [
+            "C7",
+            "C#m7b5",
+            "C#m7",
+            "Emaj7",
+            "Amaj7",
+            "Fm7b5",
+            "D7",
+            "Bbmaj7",
+            "Ebm7",
+            "Bm7b5",
+            "F#maj7",
+            "Ebm7b5"
+        ]
+    },
+    {
+        "question": "Eキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "B7",
+        "choices": [
+            "C7",
+            "Am7b5",
+            "Fmaj7",
+            "Emaj7",
+            "E7",
+            "Em7",
+            "G7",
+            "F#m7b5",
+            "Bbmaj7",
+            "B7",
+            "Bm7",
+            "F#maj7"
+        ]
+    },
+    {
+        "question": "Eキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "C#m7",
+        "choices": [
+            "Am7b5",
+            "Ebmaj7",
+            "Amaj7",
+            "Dmaj7",
+            "F#m7b5",
+            "Ab7",
+            "C#m7",
+            "Abm7b5",
+            "Am7",
+            "F7",
+            "C#7",
+            "C#maj7"
+        ]
+    },
+    {
+        "question": "Eキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Ebm7b5",
+        "choices": [
+            "Cm7b5",
+            "Bb7",
+            "Gm7b5",
+            "C#m7b5",
+            "Bbmaj7",
+            "Bm7",
+            "C#7",
+            "C#m7",
+            "Ebm7b5",
+            "F#m7",
+            "E7",
+            "F#7"
+        ]
+    },
+    {
+        "question": "Fキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Gm7",
+        "choices": [
+            "Fm7b5",
+            "G7",
+            "Bbm7",
+            "Ebmaj7",
+            "B7",
+            "Bm7b5",
+            "F#m7",
+            "Abmaj7",
+            "Gm7",
+            "Abm7b5",
+            "Bb7",
+            "Fmaj7"
+        ]
+    },
+    {
+        "question": "Fキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Am7",
+        "choices": [
+            "Gmaj7",
+            "Cm7b5",
+            "Abmaj7",
+            "Am7",
+            "Em7",
+            "Em7b5",
+            "Dm7b5",
+            "A7",
+            "C#m7b5",
+            "Bm7b5",
+            "Dmaj7",
+            "Emaj7"
+        ]
+    },
+    {
+        "question": "Fキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Bbmaj7",
+        "choices": [
+            "Cm7",
+            "Bbmaj7",
+            "Dmaj7",
+            "Bb7",
+            "Fm7b5",
+            "Abm7",
+            "Gmaj7",
+            "Fm7",
+            "F#7",
+            "Bmaj7",
+            "Dm7",
+            "C#7"
+        ]
+    },
+    {
+        "question": "Fキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "C7",
+        "choices": [
+            "Abm7b5",
+            "Bbm7",
+            "F#maj7",
+            "F#7",
+            "Em7",
+            "F#m7",
+            "Bbmaj7",
+            "Ebm7b5",
+            "C#7",
+            "Cmaj7",
+            "Abmaj7",
+            "C7"
+        ]
+    },
+    {
+        "question": "Fキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Dm7",
+        "choices": [
+            "Bmaj7",
+            "C#maj7",
+            "Cm7",
+            "Am7b5",
+            "Cmaj7",
+            "D7",
+            "Bb7",
+            "Gmaj7",
+            "Ebm7b5",
+            "Am7",
+            "Em7",
+            "Dm7"
+        ]
+    },
+    {
+        "question": "Fキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Em7b5",
+        "choices": [
+            "Bm7",
+            "Fmaj7",
+            "Abm7",
+            "C#m7b5",
+            "Gm7b5",
+            "Bm7b5",
+            "Bbm7b5",
+            "Fm7b5",
+            "Dm7b5",
+            "Fm7",
+            "Em7b5",
+            "Abm7b5"
+        ]
+    },
+    {
+        "question": "F#キーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Abm7",
+        "choices": [
+            "F#m7",
+            "F7",
+            "Abm7b5",
+            "Bm7",
+            "Abm7",
+            "Emaj7",
+            "Bm7b5",
+            "Bmaj7",
+            "Fm7b5",
+            "Bb7",
+            "Am7b5",
+            "Eb7"
+        ]
+    },
+    {
+        "question": "F#キーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Bbm7",
+        "choices": [
+            "Am7",
+            "Am7b5",
+            "G7",
+            "B7",
+            "Ebmaj7",
+            "Dm7b5",
+            "F#7",
+            "F#m7b5",
+            "E7",
+            "Bm7b5",
+            "Bbm7",
+            "A7"
+        ]
+    },
+    {
+        "question": "F#キーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Bmaj7",
+        "choices": [
+            "Dm7b5",
+            "Ebmaj7",
+            "Gm7",
+            "Bm7b5",
+            "Abm7b5",
+            "Fm7",
+            "Bmaj7",
+            "Abmaj7",
+            "F#m7",
+            "Amaj7",
+            "Bbm7b5",
+            "Ebm7b5"
+        ]
+    },
+    {
+        "question": "F#キーでダイアトニックコード（四和音）のVは何？",
+        "correct": "C#7",
+        "choices": [
+            "Ebm7b5",
+            "Em7b5",
+            "C#7",
+            "Bm7",
+            "Em7",
+            "Fm7",
+            "Gm7b5",
+            "Abmaj7",
+            "Amaj7",
+            "Bbmaj7",
+            "D7",
+            "Ab7"
+        ]
+    },
+    {
+        "question": "F#キーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Ebm7",
+        "choices": [
+            "Abm7b5",
+            "Ab7",
+            "Em7b5",
+            "Bm7",
+            "Abm7",
+            "A7",
+            "Am7",
+            "Ebm7",
+            "E7",
+            "C#m7b5",
+            "D7",
+            "Amaj7"
+        ]
+    },
+    {
+        "question": "F#キーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Fm7b5",
+        "choices": [
+            "A7",
+            "C7",
+            "Bbmaj7",
+            "Em7b5",
+            "Emaj7",
+            "Fm7b5",
+            "Dm7",
+            "C#m7",
+            "Abm7b5",
+            "C#maj7",
+            "Cm7b5",
+            "F7"
+        ]
+    },
+    {
+        "question": "Gキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Am7",
+        "choices": [
+            "Em7",
+            "F#maj7",
+            "Abmaj7",
+            "Fm7",
+            "Bbm7b5",
+            "Am7b5",
+            "F#m7",
+            "Cm7",
+            "Am7",
+            "Gmaj7",
+            "Cmaj7",
+            "Ebm7b5"
+        ]
+    },
+    {
+        "question": "Gキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Bm7",
+        "choices": [
+            "Bbmaj7",
+            "Cmaj7",
+            "F#7",
+            "Dm7b5",
+            "G7",
+            "Em7",
+            "Gm7b5",
+            "Abm7b5",
+            "Bbm7",
+            "Bm7",
+            "Cm7",
+            "Gmaj7"
+        ]
+    },
+    {
+        "question": "Gキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Cmaj7",
+        "choices": [
+            "D7",
+            "Ab7",
+            "Em7",
+            "Bb7",
+            "Abmaj7",
+            "C7",
+            "F#m7",
+            "Fmaj7",
+            "Fm7b5",
+            "C#m7",
+            "Cmaj7",
+            "A7"
+        ]
+    },
+    {
+        "question": "Gキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "D7",
+        "choices": [
+            "Abm7",
+            "Ebm7",
+            "Dmaj7",
+            "Dm7b5",
+            "Bbm7",
+            "Eb7",
+            "Ab7",
+            "Gm7b5",
+            "D7",
+            "C7",
+            "Bbm7b5",
+            "E7"
+        ]
+    },
+    {
+        "question": "Gキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Em7",
+        "choices": [
+            "Fm7",
+            "Bbm7",
+            "A7",
+            "Bm7",
+            "Am7",
+            "D7",
+            "Ab7",
+            "Cm7",
+            "Ebm7",
+            "Bmaj7",
+            "Em7",
+            "Eb7"
+        ]
+    },
+    {
+        "question": "Gキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "F#m7b5",
+        "choices": [
+            "Bbm7",
+            "F#m7b5",
+            "Am7b5",
+            "A7",
+            "C7",
+            "Abm7",
+            "Gm7",
+            "Bbmaj7",
+            "Gm7b5",
+            "Ebm7b5",
+            "Fm7",
+            "Dmaj7"
+        ]
+    },
+    {
+        "question": "Abキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Bbm7",
+        "choices": [
+            "Abmaj7",
+            "Ebm7b5",
+            "Ebm7",
+            "C#7",
+            "C#m7b5",
+            "Bbm7",
+            "F#m7b5",
+            "Dm7b5",
+            "C#m7",
+            "Bmaj7",
+            "Gm7b5",
+            "Bm7"
+        ]
+    },
+    {
+        "question": "Abキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Cm7",
+        "choices": [
+            "F#maj7",
+            "Fmaj7",
+            "Gm7",
+            "Cm7",
+            "Bbm7b5",
+            "E7",
+            "Ab7",
+            "Dm7b5",
+            "F#m7b5",
+            "Am7",
+            "G7",
+            "A7"
+        ]
+    },
+    {
+        "question": "Abキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "C#maj7",
+        "choices": [
+            "Ebm7",
+            "C#m7b5",
+            "B7",
+            "F#m7b5",
+            "Ebmaj7",
+            "Abmaj7",
+            "Gm7",
+            "Bbm7",
+            "C#m7",
+            "C#maj7",
+            "Eb7",
+            "F#m7"
+        ]
+    },
+    {
+        "question": "Abキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "Eb7",
+        "choices": [
+            "Am7",
+            "Bm7b5",
+            "C#m7",
+            "Em7b5",
+            "Cmaj7",
+            "Abm7",
+            "Abm7b5",
+            "F#m7b5",
+            "F#maj7",
+            "Fm7",
+            "Eb7",
+            "Bmaj7"
+        ]
+    },
+    {
+        "question": "Abキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Fm7",
+        "choices": [
+            "Cmaj7",
+            "Eb7",
+            "Fmaj7",
+            "B7",
+            "Am7b5",
+            "Ebm7b5",
+            "C#m7",
+            "Fm7",
+            "A7",
+            "C#m7b5",
+            "G7",
+            "Abm7b5"
+        ]
+    },
+    {
+        "question": "Abキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Gm7b5",
+        "choices": [
+            "E7",
+            "Gm7b5",
+            "Dm7",
+            "Em7b5",
+            "Bb7",
+            "C#maj7",
+            "Gm7",
+            "Emaj7",
+            "Eb7",
+            "Bbm7b5",
+            "C#m7b5",
+            "Ebm7b5"
+        ]
+    },
+    {
+        "question": "Aキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Bm7",
+        "choices": [
+            "Gmaj7",
+            "Amaj7",
+            "Gm7b5",
+            "Bm7",
+            "C#7",
+            "Cm7b5",
+            "Dm7",
+            "Ebmaj7",
+            "Em7b5",
+            "F#m7",
+            "Fmaj7",
+            "C7"
+        ]
+    },
+    {
+        "question": "Aキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "C#m7",
+        "choices": [
+            "Gmaj7",
+            "C#maj7",
+            "C#m7",
+            "Abmaj7",
+            "Dm7b5",
+            "Abm7b5",
+            "F#m7b5",
+            "Bm7",
+            "G7",
+            "D7",
+            "Bmaj7",
+            "Cm7"
+        ]
+    },
+    {
+        "question": "Aキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Dmaj7",
+        "choices": [
+            "Gm7",
+            "Ebm7b5",
+            "C#m7b5",
+            "Dmaj7",
+            "Gm7b5",
+            "Dm7",
+            "Fm7",
+            "Gmaj7",
+            "Bm7",
+            "Fmaj7",
+            "Abmaj7",
+            "Bbm7b5"
+        ]
+    },
+    {
+        "question": "Aキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "E7",
+        "choices": [
+            "Amaj7",
+            "Cm7b5",
+            "Bbm7",
+            "Bm7b5",
+            "E7",
+            "Bb7",
+            "Am7",
+            "F#m7b5",
+            "C#m7b5",
+            "B7",
+            "Bbm7b5",
+            "Dm7"
+        ]
+    },
+    {
+        "question": "Aキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "F#m7",
+        "choices": [
+            "F#m7",
+            "Amaj7",
+            "C#m7b5",
+            "Bbm7b5",
+            "Bbmaj7",
+            "Bm7b5",
+            "Ebm7",
+            "Em7",
+            "C#m7",
+            "Eb7",
+            "Abm7",
+            "Dm7"
+        ]
+    },
+    {
+        "question": "Aキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Abm7b5",
+        "choices": [
+            "C#maj7",
+            "Amaj7",
+            "Abm7",
+            "F#m7",
+            "D7",
+            "Fm7",
+            "Cm7b5",
+            "C#m7",
+            "E7",
+            "Abm7b5",
+            "Bbmaj7",
+            "Ebm7b5"
+        ]
+    },
+    {
+        "question": "Bbキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "Cm7",
+        "choices": [
+            "Bm7",
+            "Amaj7",
+            "Dm7b5",
+            "Em7b5",
+            "E7",
+            "Abmaj7",
+            "Am7b5",
+            "Bbm7",
+            "F7",
+            "Cm7",
+            "Bb7",
+            "G7"
+        ]
+    },
+    {
+        "question": "Bbキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Dm7",
+        "choices": [
+            "Eb7",
+            "F#maj7",
+            "Cm7",
+            "Ebmaj7",
+            "Fmaj7",
+            "Dm7",
+            "Bbm7b5",
+            "Dm7b5",
+            "C#m7b5",
+            "C#m7",
+            "Gm7",
+            "G7"
+        ]
+    },
+    {
+        "question": "Bbキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Ebmaj7",
+        "choices": [
+            "Dm7",
+            "Ebmaj7",
+            "Fm7",
+            "Bb7",
+            "Abm7b5",
+            "Cm7",
+            "G7",
+            "Bbm7",
+            "Am7b5",
+            "Ebm7",
+            "Gmaj7",
+            "F7"
+        ]
+    },
+    {
+        "question": "Bbキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "F7",
+        "choices": [
+            "Dm7b5",
+            "Bbmaj7",
+            "Bmaj7",
+            "Em7b5",
+            "F#maj7",
+            "F7",
+            "Ebm7",
+            "C7",
+            "Fm7",
+            "Cm7",
+            "Ab7",
+            "C#m7b5"
+        ]
+    },
+    {
+        "question": "Bbキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Gm7",
+        "choices": [
+            "Gm7",
+            "A7",
+            "Bmaj7",
+            "Gm7b5",
+            "C#m7b5",
+            "Bbm7",
+            "Eb7",
+            "Ebm7b5",
+            "E7",
+            "Amaj7",
+            "F#7",
+            "D7"
+        ]
+    },
+    {
+        "question": "Bbキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Am7b5",
+        "choices": [
+            "Am7b5",
+            "Bb7",
+            "Gmaj7",
+            "C7",
+            "Ebmaj7",
+            "Amaj7",
+            "C#7",
+            "Bm7b5",
+            "F#m7",
+            "Ebm7",
+            "Abm7",
+            "Bbm7"
+        ]
+    },
+    {
+        "question": "Bキーでダイアトニックコード（四和音）のIIは何？",
+        "correct": "C#m7",
+        "choices": [
+            "Amaj7",
+            "Emaj7",
+            "Abmaj7",
+            "C#maj7",
+            "Abm7",
+            "Bbm7",
+            "F#maj7",
+            "Cm7b5",
+            "Ab7",
+            "B7",
+            "F#m7",
+            "C#m7"
+        ]
+    },
+    {
+        "question": "Bキーでダイアトニックコード（四和音）のIIIは何？",
+        "correct": "Ebm7",
+        "choices": [
+            "Am7b5",
+            "Cm7",
+            "E7",
+            "Ebm7",
+            "Dmaj7",
+            "A7",
+            "Em7b5",
+            "Dm7",
+            "Bmaj7",
+            "Ebm7b5",
+            "Emaj7",
+            "Em7"
+        ]
+    },
+    {
+        "question": "Bキーでダイアトニックコード（四和音）のIVは何？",
+        "correct": "Emaj7",
+        "choices": [
+            "Ab7",
+            "Fm7b5",
+            "Eb7",
+            "Cm7",
+            "Ebmaj7",
+            "Cm7b5",
+            "C#7",
+            "Emaj7",
+            "Abm7",
+            "Fmaj7",
+            "F#7",
+            "F7"
+        ]
+    },
+    {
+        "question": "Bキーでダイアトニックコード（四和音）のVは何？",
+        "correct": "F#7",
+        "choices": [
+            "Fmaj7",
+            "E7",
+            "Ebmaj7",
+            "Ebm7",
+            "F#7",
+            "Dm7",
+            "F#maj7",
+            "Cmaj7",
+            "Em7b5",
+            "Cm7",
+            "F#m7",
+            "Ebm7b5"
+        ]
+    },
+    {
+        "question": "Bキーでダイアトニックコード（四和音）のVIは何？",
+        "correct": "Abm7",
+        "choices": [
+            "Ab7",
+            "Am7",
+            "D7",
+            "Emaj7",
+            "Dm7b5",
+            "Fmaj7",
+            "E7",
+            "Ebm7b5",
+            "Bm7b5",
+            "Bmaj7",
+            "Bm7",
+            "Abm7"
+        ]
+    },
+    {
+        "question": "Bキーでダイアトニックコード（四和音）のVIIは何？",
+        "correct": "Bbm7b5",
+        "choices": [
+            "Dm7",
+            "Gm7",
+            "Bbm7b5",
+            "C#m7",
+            "Fm7",
+            "A7",
+            "D7",
+            "C#maj7",
+            "C#7",
+            "Em7",
+            "F7",
+            "Bm7"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、9thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、b9thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、#9thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、11thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、b11thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、#11thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、13thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、b13thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がCの場合、#13thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、9thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、b9thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、#9thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、11thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、b11thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、#11thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、13thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、b13thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がC#の場合、#13thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、9thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、b9thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、#9thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、11thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、b11thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、#11thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、13thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、b13thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がDの場合、#13thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、9thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、b9thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、#9thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、11thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、b11thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、#11thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、13thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、b13thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEbの場合、#13thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、9thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、b9thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、#9thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、11thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、b11thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、#11thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、13thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、b13thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がEの場合、#13thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、9thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、b9thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、#9thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、11thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、b11thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、#11thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、13thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、b13thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がFの場合、#13thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、9thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、b9thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、#9thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、11thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、b11thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、#11thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、13thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、b13thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がF#の場合、#13thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、9thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、b9thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、#9thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、11thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、b11thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、#11thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、13thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、b13thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がGの場合、#13thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、9thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、b9thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、#9thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、11thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、b11thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、#11thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、13thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、b13thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAbの場合、#13thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、9thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、b9thの音は何？",
+        "correct": "Bb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、#9thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、11thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、b11thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、#11thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、13thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、b13thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がAの場合、#13thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、9thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、b9thの音は何？",
+        "correct": "B",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、#9thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、11thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、b11thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、#11thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、13thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、b13thの音は何？",
+        "correct": "F#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBbの場合、#13thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、9thの音は何？",
+        "correct": "C#",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、b9thの音は何？",
+        "correct": "C",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、#9thの音は何？",
+        "correct": "D",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、11thの音は何？",
+        "correct": "E",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、b11thの音は何？",
+        "correct": "Eb",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、#11thの音は何？",
+        "correct": "F",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、13thの音は何？",
+        "correct": "Ab",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、b13thの音は何？",
+        "correct": "G",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "ルート音がBの場合、#13thの音は何？",
+        "correct": "A",
+        "choices": [
+            "C",
+            "C#",
+            "D",
+            "Eb",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "Ab",
+            "A",
+            "Bb",
+            "B"
+        ]
+    },
+    {
+        "question": "キーがCの場合の調号は何？",
+        "correct": "シャープ・フラットなし",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがAmの場合の調号は何？",
+        "correct": "シャープ・フラットなし",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがGの場合の調号は何？",
+        "correct": "シャープ(♯)1つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがEmの場合の調号は何？",
+        "correct": "シャープ(♯)1つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがDの場合の調号は何？",
+        "correct": "シャープ(♯)2つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがBmの場合の調号は何？",
+        "correct": "シャープ(♯)2つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがAの場合の調号は何？",
+        "correct": "シャープ(♯)3つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがF#mの場合の調号は何？",
+        "correct": "シャープ(♯)3つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがEの場合の調号は何？",
+        "correct": "シャープ(♯)4つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがC#mの場合の調号は何？",
+        "correct": "シャープ(♯)4つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがBの場合の調号は何？",
+        "correct": "シャープ(♯)5つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがG#mの場合の調号は何？",
+        "correct": "シャープ(♯)5つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがF#の場合の調号は何？",
+        "correct": "シャープ(♯)6つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがD#mの場合の調号は何？",
+        "correct": "シャープ(♯)6つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがFの場合の調号は何？",
+        "correct": "フラット(♭)1つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがDmの場合の調号は何？",
+        "correct": "フラット(♭)1つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがBbの場合の調号は何？",
+        "correct": "フラット(♭)2つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがGmの場合の調号は何？",
+        "correct": "フラット(♭)2つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがEbの場合の調号は何？",
+        "correct": "フラット(♭)3つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがCmの場合の調号は何？",
+        "correct": "フラット(♭)3つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがAbの場合の調号は何？",
+        "correct": "フラット(♭)4つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがFmの場合の調号は何？",
+        "correct": "フラット(♭)4つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがDbの場合の調号は何？",
+        "correct": "フラット(♭)5つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがBbmの場合の調号は何？",
+        "correct": "フラット(♭)5つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがGbの場合の調号は何？",
+        "correct": "フラット(♭)6つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    },
+    {
+        "question": "キーがEbmの場合の調号は何？",
+        "correct": "フラット(♭)6つ",
+        "choices": [
+            "シャープ・フラットなし",
+            "シャープ(♯)1つ",
+            "シャープ(♯)2つ",
+            "シャープ(♯)3つ",
+            "シャープ(♯)4つ",
+            "シャープ(♯)5つ",
+            "シャープ(♯)6つ",
+            "フラット(♭)1つ",
+            "フラット(♭)2つ",
+            "フラット(♭)3つ",
+            "フラット(♭)4つ",
+            "フラット(♭)5つ",
+            "フラット(♭)6つ"
+        ]
+    }
+]
