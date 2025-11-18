@@ -179,6 +179,18 @@ export function parseChord (chordString) {
 export function assignOctavesToChordNotes (rawNotes, lowestOctave = 3) {
   if (rawNotes.length === 0) return []
 
+  // rawNotesの長さが6以上の場合は、特定の音を間引く
+  // 11thコード（構成音6つ）の場合、9th（5番目の音）を省略することが多い
+  if (rawNotes.length === 6) {
+    rawNotes.splice(4, 1) // 5番目の要素を削除
+  }
+  // 13thコード（構成音7つ）の場合、9thと11th（5, 6番目の音）を省略することが多い
+  if (rawNotes.length >= 7) {
+    // 6番目から削除することでインデックスのずれを防ぐ
+    rawNotes.splice(5, 1) // 6番目の要素を削除
+    rawNotes.splice(4, 1) // 5番目の要素を削除
+  }
+
   const notesWithOctaves = []
   // 検索を開始するインデックスを決定
   // lowestOctaveの最初の音（例: C3）を探し、そこから検索を開始する

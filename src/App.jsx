@@ -11,6 +11,7 @@ import Scale from './Scale'
 import Phrase from './Phrase'
 import ChordPlaying from './ChordPlaying'
 import Accompaniment from './Accompaniment'
+import Quiz from './Quiz'
 import { loadAllSounds } from './etc/sound'
 import './index.css'
 
@@ -74,6 +75,8 @@ function App () {
         return (
           <Accompaniment tempo={tempo} setTempo={setTempo} handleTempoChange={handleTempoChange} />
         )
+      case 'Quiz':
+        return <Quiz />
       default:
         return ''
     }
@@ -91,6 +94,7 @@ function App () {
             <option value='MusicTheory2'>マイナー・スケールの話</option>
             <option value='MusicTheory3'>複雑なコードの仕組み</option>
             <option value='FingerboardNotes'>指板の音を覚える</option>
+            <option value='Quiz'>クイズ</option>
             <option value='Chord'>コードポジション</option>
             <option value='Scale'>コードトーンとスケール</option>
             {/* <option value='Phrase'>フレーズ</option> */}

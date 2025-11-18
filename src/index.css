@@ -480,3 +480,55 @@ nav select {
     margin: 50px auto;
   }
 }
+
+/* Quiz */
+.quiz-area {
+  text-align: center;
+
+  h4 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  p {
+    padding: 10px;
+    font-size: 2rem;
+  }
+
+  .correct {
+    color: green;
+  }
+  .incorrect {
+    color: red;
+  }
+
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .choices {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 1.5rem;
+    margin: 50px auto;
+  }
+
+  .choice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  .next {
+    margin-top: 50px;
+  }
+}
