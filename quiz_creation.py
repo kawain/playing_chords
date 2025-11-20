@@ -132,10 +132,10 @@ def create_guitar_fretboard_q(qa_list):
     fretboard_2d = [s.replace(" ", "").split("|") for s in FRETBOARD_STRINGS]
     for gen, gen_val in enumerate(fretboard_2d):
         for flet, flet_val in enumerate(gen_val):
-            if 1 <= flet <= 12 and flet_val:
+            if 1 <= flet <= 22 and flet_val:
                 qa_list.append(
                     {
-                        "question": f"ギターの{gen + 1}弦、{flet}フレットの音は何？",
+                        "question": f"ギターの {gen + 1} 弦、{flet} フレットの音は何？",
                         "correct": flet_val,
                         "choices": ANSWER_OPTIONS,
                     }
@@ -150,21 +150,21 @@ def create_chord_notes_q(qa_list):
             if results and len(results) >= 4:
                 qa_list.append(
                     {
-                        "question": f"{chord_str}コードの3rdの音は何？",
+                        "question": f"{chord_str} コードの 3rd の音は何？",
                         "correct": results[1],
                         "choices": ANSWER_OPTIONS,
                     }
                 )
                 qa_list.append(
                     {
-                        "question": f"{chord_str}コードの5thの音は何？",
+                        "question": f"{chord_str} コードの 5th の音は何？",
                         "correct": results[2],
                         "choices": ANSWER_OPTIONS,
                     }
                 )
                 qa_list.append(
                     {
-                        "question": f"{chord_str}コードの7thの音は何？",
+                        "question": f"{chord_str} コードの 7th の音は何？",
                         "correct": results[3],
                         "choices": ANSWER_OPTIONS,
                     }
@@ -190,7 +190,7 @@ def create_diatonic_chords_q(qa_list):
 
             qa_list.append(
                 {
-                    "question": f"{key_note}キーでダイアトニックコード（四和音）の{DEGREE_ROMAN[i]}は何？",
+                    "question": f"{key_note} キーでダイアトニックコード（四和音）の {DEGREE_ROMAN[i]} は何？",
                     "correct": correct_answer,
                     "choices": shuffled_choices,
                 }
@@ -205,7 +205,7 @@ def create_tension_notes_q(qa_list):
             correct_answer = NOTES_PREFERRED[note_index]
             qa_list.append(
                 {
-                    "question": f"ルート音が{root_note}の場合、{tension_name}の音は何？",
+                    "question": f"ルート音が {root_note} の場合、{tension_name} の音は何？",
                     "correct": correct_answer,
                     "choices": ANSWER_OPTIONS,
                 }
@@ -217,14 +217,14 @@ def create_key_signature_q(qa_list):
         correct_answer = "シャープ・フラットなし" if num == 0 else f"{acc_type}{num}つ"
         qa_list.append(
             {
-                "question": f"キーが{major_key}の場合の調号は何？",
+                "question": f"キーが {major_key} の場合の調号は何？",
                 "correct": correct_answer,
                 "choices": KEY_SIGNATURE_CHOICES,
             }
         )
         qa_list.append(
             {
-                "question": f"キーが{minor_key}の場合の調号は何？",
+                "question": f"キーが {minor_key} の場合の調号は何？",
                 "correct": correct_answer,
                 "choices": KEY_SIGNATURE_CHOICES,
             }
@@ -240,7 +240,7 @@ def main():
     create_chord_notes_q(qa)
     create_diatonic_chords_q(qa)
     create_tension_notes_q(qa)
-    create_key_signature_q(qa)
+    # create_key_signature_q(qa)
 
     output_dir = "./public"
     output_path = os.path.join(output_dir, "qa.json")

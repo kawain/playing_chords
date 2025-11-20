@@ -486,8 +486,12 @@ nav select {
   text-align: center;
 
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 20px 0;
+  }
+
+  h4 span {
+    border-bottom: #ccc 1px solid;
   }
 
   p {
@@ -514,7 +518,7 @@ nav select {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 50px auto;
   }
 
@@ -525,6 +529,10 @@ nav select {
   }
 
   label {
+    cursor: pointer;
+  }
+
+  input {
     cursor: pointer;
   }
 

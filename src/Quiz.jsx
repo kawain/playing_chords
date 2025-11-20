@@ -114,7 +114,9 @@ function Quiz () {
         </button>
       ) : currentQuiz ? (
         <div>
-          <h4>{currentQuiz.question}</h4>
+          <h4>
+            <span>{currentQuiz.question}</span>
+          </h4>
           <div className='choices'>
             {shuffledChoices.map((choice, index) => (
               <div key={index} className='choice'>
